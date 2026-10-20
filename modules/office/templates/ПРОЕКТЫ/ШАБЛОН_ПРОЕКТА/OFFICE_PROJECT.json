@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "project": {
+    "code": "TEMPLATE",
+    "name": "Новый проект",
+    "mode": "commercial",
+    "status": "intake",
+    "created": null,
+    "currency": "RUB",
+    "owner": null,
+    "start_date": null,
+    "end_date": null
+  },
+  "pipeline": {
+    "current_gate": "intake",
+    "rules": []
+  },
+  "files": {
+    "estimate_json": "02_СМЕТА/estimate.json",
+    "estimate_workbook": "02_СМЕТА/estimate.xlsx",
+    "documents_register": "03_ДОКУМЕНТЫ/register.csv",
+    "payments_register": "04_ОПЛАТЫ/payments.csv",
+    "delivery_dir": "05_ВЫДАЧА"
+  },
+  "approvals": {
+    "estimate": "missing",
+    "documents": "missing",
+    "delivery": "missing"
+  }
+}

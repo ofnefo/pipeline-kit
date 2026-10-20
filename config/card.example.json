@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "id": "project-sample",
+    "type": "project",
+    "title": "Sample project",
+    "status": "active",
+    "canonical": "Set this to the local project folder"
+  },
+  "body": "## Что это\nA sample production project.\n\n## Где лежит\nSet the local path.\n\n## Репозиторий\nNot configured.\n\n## Запуск и деплой\nLocal only.\n\n## Куда вносить изменения\nThe project folder.\n\n## Риски и открытые вопросы\nDefine deliverables and acceptance.\n\n## Ревью\nNot reviewed.",
+  "reason": "Create local project"
+}

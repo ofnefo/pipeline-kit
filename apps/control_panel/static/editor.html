@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Редактор — Pipeline Control</title>
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--text:#1d232b;--muted:#5f6b7a;--line:#d9dee5;--accent:#1f6feb;--ok:#1a7f37;--bad:#cf222e}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1318;--panel:#171c23;--text:#e6edf3;--muted:#9aa6b2;--line:#2b333d;--accent:#4c8dff;--ok:#3fb950;--bad:#ff6b6b}}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{display:flex;flex-direction:column;background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:8px 16px;background:var(--panel);border-bottom:1px solid var(--line)}
+header a{color:var(--accent);text-decoration:none}header a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.file{font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1 1 200px}
+.muted{color:var(--muted)}#status{min-width:0;overflow-wrap:anywhere}#status.ok{color:var(--ok)}#status.bad{color:var(--bad)}
+button,select{font:inherit;padding:6px 12px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--text)}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff;cursor:pointer}button:disabled{opacity:.55;cursor:default}
+iframe{flex:1;width:100%;border:0;background:#fff}
+</style>
+</head>
+<body>
+<header>
+  <a href="/" title="Вернуться в панель">← Панель</a>
+  <span class="file" id="file"></span>
+  <span id="save-box" hidden>
+    <select id="fmt" aria-label="Формат новой версии" hidden><option value="png">PNG</option><option value="jpg">JPG</option><option value="webp">WEBP</option></select>
+    <button class="primary" id="save" disabled>Сохранить новую версию</button>
+  </span>
+  <span id="status" class="muted" role="status"></span>
+</header>
+<iframe id="ed" title="Редактор"></iframe>
+<script>
+// W4 host: loads a project file into an offline editor (/tools/...) and saves a NEW version beside it (/api/editors/save).
+const P = new URLSearchParams(location.search), tool = P.get('tool') || '', root = P.get('root') || 'projects', path = P.get('path') || '';
+const TOOLS = {
+  minipaint: { title: 'miniPaint', src: '/tools/minipaint/index.html' },
+  svgedit: { title: 'SVG-Edit', src: '/tools/svgedit/dist/editor/index.html' },
+  audiomass: { title: 'AudioMass', src: '/tools/audiomass/src/index.html?skipintro=1' },
+};
+const $ = (id) => document.getElementById(id), frame = $('ed');
+const media = () => `/api/project-browser/media?root=${encodeURIComponent(root)}&path=${encodeURIComponent(path)}`;
+const say = (t, cls = 'muted') => { $('status').textContent = t; $('status').className = cls; };
+const waitFor = (get, ms = 20000) => new Promise((ok, no) => { const t0 = Date.now(); (function poll() { let v; try { v = get(); } catch {} if (v) return ok(v); if (Date.now() - t0 > ms) return no(new Error('редактор не загрузился')); setTimeout(poll, 150); })(); });
+const T = TOOLS[tool];
+if (!T) { $('file').textContent = 'Неизвестный редактор'; say('Откройте редактор из панели', 'bad'); }
+else {
+  document.title = `${T.title}${path ? ' — ' + path.split('/').pop() : ''}`;
+  $('file').textContent = path ? `${T.title} · ${path}` : T.title;
+  frame.src = T.src;
+  if (path) { $('save-box').hidden = false; $('fmt').hidden = tool !== 'minipaint'; const m = /\.(jpe?g|webp)$/i.exec(path); if (m) $('fmt').value = m[1].toLowerCase().replace('jpeg', 'jpg'); }
+  frame.addEventListener('load', () => path && open().catch((e) => say('Не открылось: ' + e.message, 'bad')), { once: true });
+}
+async function open() {
+  say('Открываю файл…');
+  const w = frame.contentWindow;
+  if (tool === 'minipaint') {
+    const fo = await waitFor(() => w.Layers && w.FileOpen);
+    const size = w.Layers.get_dimensions();
+    fo.open_resource(media());
+    await waitFor(() => { const d = w.Layers.get_dimensions(); return d.width !== size.width || d.height !== size.height; }, 8000).catch(() => {});
+  }
+  else if (tool === 'svgedit') {
+    const ed = await waitFor(() => w.svgEditor?.svgCanvas && w.svgEditor);
+    const r = await fetch(media()); if (!r.ok) throw new Error('HTTP ' + r.status);
+    ed.loadSvgString(await r.text());
+  } else if (tool === 'audiomass') {
+    const eng = await waitFor(() => w.PKAudioEditor?.engine);
+    const r = await fetch(media()); if (!r.ok) throw new Error('HTTP ' + r.status);
+    eng.LoadArrayBuffer(await r.blob());
+  }
+  $('save').disabled = false; say('Оригинал не изменяется: сохранение создаёт новую версию рядом');
+}
+function wav(buf) {
+  const ch = buf.numberOfChannels, n = buf.length, rate = buf.sampleRate, size = 44 + n * ch * 2, v = new DataView(new ArrayBuffer(size));
+  const s = (o, t) => [...t].forEach((c, i) => v.setUint8(o + i, c.charCodeAt(0)));
+  s(0, 'RIFF'); v.setUint32(4, size - 8, true); s(8, 'WAVE'); s(12, 'fmt '); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, ch, true);
+  v.setUint32(24, rate, true); v.setUint32(28, rate * ch * 2, true); v.setUint16(32, ch * 2, true); v.setUint16(34, 16, true); s(36, 'data'); v.setUint32(40, n * ch * 2, true);
+  const data = [...Array(ch)].map((_, i) => buf.getChannelData(i));
+  for (let i = 0, o = 44; i < n; i++) for (let c = 0; c < ch; c++, o += 2) { const x = Math.max(-1, Math.min(1, data[c][i])); v.setInt16(o, x < 0 ? x * 0x8000 : x * 0x7fff, true); }
+  return new Blob([v], { type: 'audio/wav' });
+}
+async function blob() {
+  const w = frame.contentWindow;
+  if (tool === 'minipaint') {
+    const L = w.Layers, dim = L.get_dimensions(), c = document.createElement('canvas'); c.width = dim.width; c.height = dim.height;
+    L.convert_layers_to_canvas(c.getContext('2d'));
+    const fmt = $('fmt').value, mime = { png: 'image/png', jpg: 'image/jpeg', webp: 'image/webp' }[fmt];
+    return [await new Promise((ok) => c.toBlob(ok, mime, 0.92)), fmt];
+  }
+  if (tool === 'svgedit') return [new Blob([w.svgEditor.svgCanvas.getSvgString()], { type: 'image/svg+xml' }), 'svg'];
+  const buf = w.PKAudioEditor.engine.wavesurfer.backend.buffer; if (!buf) throw new Error('нет загруженного звука');
+  return [wav(buf), 'wav'];
+}
+$('save').addEventListener('click', async () => {
+  $('save').disabled = true; say('Сохраняю…');
+  try {
+    const [b, ext] = await blob(), fd = new FormData();
+    fd.append('root', root); fd.append('path', path); fd.append('editor', tool); fd.append('ext', ext); fd.append('file', b, 'edit.' + ext);
+    const r = await fetch('/api/editors/save', { method: 'POST', body: fd }), j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.detail || 'HTTP ' + r.status);
+    say(`Сохранено: ${j.path}`, 'ok');
+  } catch (e) { say('Не сохранилось: ' + e.message, 'bad'); }
+  $('save').disabled = false;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "automatic_model_switching": false,
+  "cloud_calls_enabled": false,
+  "paid_calls_enabled": false,
+  "roles": {"routine":"operator-selected local model", "implementation":"operator-selected coding session", "review":"independent reviewer"},
+  "note": "Documentation template only. The kit does not launch agents or enforce external account billing."
+}

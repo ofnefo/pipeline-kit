@@ -1,0 +1,108 @@
+/* Workspace shell: shared rhythm; section-specific working tools remain intact. */
+:root { --workspace-gap: 24px; }
+body { grid-template-columns: 224px minmax(0, 1fr); font-size: 14px; line-height: 1.45; }
+.skip-link { position: fixed; left: 16px; top: -80px; z-index: 100; background: var(--accent); color: var(--bg); padding: 12px 18px; border-radius: 8px; }
+.skip-link:focus { top: 12px; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.nav { padding: 20px 12px 12px; gap: 16px; }
+.nav .brand { padding: 0 8px; }
+.nav .brand b { font-size: 14px; }
+.nav .logo { flex-shrink: 0; width: 34px; height: 34px; border-radius: 9px; }
+.nav > nav { gap: 3px; overflow-y: auto; min-height: 0; }
+.nav > nav > a { padding: 9px 12px; border-radius: 7px; font-size: 13px; }
+.nav > nav > a.active { box-shadow: inset 3px 0 var(--accent); color: var(--text); }
+.nav-label { color: var(--muted); font-size: 11px; padding: 12px 12px 4px; }
+.nav .foot { border-top: 1px solid var(--line); padding: 12px 8px 0; font-size: 11px; }
+.section-search { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 9px 10px; font-size: 12px; text-align: left; }
+kbd { font-family: inherit; font-size: 10px; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 4px; white-space: nowrap; }
+main { padding: 24px 28px 48px; }
+main > .workspace-header { grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding-bottom: 20px; margin-bottom: 22px; border-bottom: 1px solid var(--line); gap: 4px 20px; }
+.workspace-header h1 { font-size: 27px; font-weight: 650; letter-spacing: -.6px; }
+main > .workspace-header p { grid-column: 1; margin: 0; max-width: 75ch; font-size: 13px; line-height: 1.55; }
+.workspace-actions { grid-column: 2; grid-row: 1 / 3; display: flex; align-items: center; gap: 8px; }
+.workspace-actions #updated { color: var(--muted); font-size: 11px; }
+.workspace-actions button { min-height: 36px; }
+#view { min-width: 0; }
+#view:focus { outline: none; }
+.workspace-loading { padding: 28px 0; color: var(--muted); }
+.workspace-error { padding: 16px; margin-bottom: 18px; border: 1px solid var(--bad); border-radius: 8px; background: var(--panel); }
+.workspace-error p { overflow-wrap: anywhere; color: var(--muted); }
+#section-dialog { width: min(620px, calc(100vw - 32px)); padding: 22px; max-height: 80dvh; }
+.section-dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.section-dialog-head h2 { font-size: 19px; margin: 0; }
+#section-dialog label { color: var(--muted); display: block; margin-bottom: 6px; }
+#section-query { width: 100%; padding: 12px; }
+#section-results { display: grid; gap: 4px; margin-top: 14px; }
+#section-results a { display: grid; gap: 3px; text-decoration: none; color: var(--text); padding: 10px 12px; border-radius: 6px; }
+#section-results a:hover, #section-results a:focus-visible { background: var(--panel2); }
+#section-results span { font-size: 12px; color: var(--muted); }
+/* One working toolbar, with readable tasks and independent stage scrolling. */
+.board-intro { margin-bottom: 18px; justify-content: space-between; }
+.board-toolbar { gap: 12px; margin-bottom: 16px; }
+.board-toolbar label { flex: 1 1 180px; max-width: 340px; min-width: 0; }
+.board-toolbar input, .board-toolbar select { width: 100%; min-width: 0; }
+.board-statuses { gap: 6px; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--line); }
+.board-statuses button { padding: 7px 10px; border-radius: 6px; font-size: 12px; }
+.board-statuses button span { opacity: .7; font-variant-numeric: tabular-nums; }
+.board-columns.compact-kanban { gap: 12px; padding-bottom: 12px; grid-template-columns: repeat(5, minmax(205px, 1fr)); align-items: start; }
+.board-columns.compact-kanban:has([data-status="cancelled"]) { grid-template-columns: repeat(6, minmax(205px, 1fr)); }
+.board-columns.compact-kanban.board-single { grid-template-columns: minmax(0, 680px); }
+.compact-kanban .board-column { border: 1px solid var(--line); padding: 10px; min-height: 110px; max-height: calc(100dvh - 340px); overflow-y: auto; scrollbar-width: thin; }
+.board-column h2 { position: sticky; top: -10px; z-index: 1; margin: -1px 0 12px; background: var(--panel); padding: 12px 2px 10px; font-size: 13px; }
+.board-column[data-status="queued"] h2 { border-color: var(--muted); }
+.board-column[data-status="running"] h2 { border-color: var(--info); }
+.board-column[data-status="blocked"] h2 { border-color: var(--bad); }
+.board-column[data-status="review"] h2 { border-color: var(--warn); }
+.board-column[data-status="done"] h2 { border-color: var(--ok); }
+.board-column[data-status="cancelled"] h2 { border-color: var(--muted); }
+.compact-kanban .task-card { margin-bottom: 8px; gap: 8px; padding: 12px; border-radius: 7px; }
+.task-card strong { font-weight: 600; }
+.task-card .task-project { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.task-card .task-meta { padding-top: 8px; border-top: 1px solid var(--line); }
+.board-completed summary { font-size: 13px; padding: 12px 2px; }
+.board-empty { padding: 14px 2px; }
+@media(min-width:761px) {
+  body.nav-rail .nav-label { font-size: 0; height: 10px; padding: 0; border-top: 1px solid var(--line); margin: 6px 0; }
+  body.nav-rail .section-search { width: 44px; justify-content: center; padding: 9px 0; }
+  body.nav-rail .section-search span, body.nav-rail .section-search kbd, body.nav-rail .foot { display: none; }
+  body.nav-rail .section-search::before { content: '⌕'; font-size: 19px; }
+}
+@media(max-width:1100px) { .workspace-actions #updated { display: none; } main { padding: 20px; } }
+@media(max-width:760px) {
+  body { display: block; }
+  main { padding: 18px 16px 110px; }
+  main > .workspace-header { grid-template-columns: minmax(0, 1fr) auto; padding-bottom: 16px; margin-bottom: 18px; }
+  .workspace-header h1 { font-size: 23px; }
+  main > .workspace-header p { grid-column: 1 / -1; font-size: 12px; }
+  .workspace-actions { grid-column: 2; grid-row: 1; }
+  .nav { padding: 6px 6px max(6px, env(safe-area-inset-bottom)); gap: 0; }
+  .nav .brand, .nav .foot, .nav .section-search, .nav-label { display: none; }
+  .nav > nav { flex-direction: row; overflow: visible; gap: 2px; width: 100%; }
+  .nav > nav > a, .nav-more { min-width: 0; flex: 1 1 0; font-size: 10px; padding: 8px 1px; min-height: 50px; }
+  .nav > nav > a.active { box-shadow: inset 0 2px var(--accent); }
+  .nav > nav > a span { font-size: 16px; }
+  body.nav-more-open .nav > nav > a:not([data-primary]):not([hidden]) { flex: 1 1 23%; padding: 10px 2px; font-size: 12px; }
+  .board-intro { align-items: flex-start; gap: 12px; }
+  .board-toolbar { gap: 10px; }
+  .board-toolbar label { flex-basis: calc(50% - 5px); width: auto; max-width: none; }
+  .board-toolbar label:first-child { flex-basis: 100%; }
+  .board-statuses { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 10px; }
+  .board-statuses button { flex-shrink: 0; min-height: 40px; }
+  .board-columns.compact-kanban, .board-columns.compact-kanban:has([data-status="cancelled"]) { grid-template-columns: minmax(0, 1fr); overflow: visible; }
+  .compact-kanban .board-column { max-height: none; overflow: visible; }
+  .board-column h2 { position: static; }
+  .task-card { min-height: 44px; }
+}
+
+/* Keep the model form within reach, including on a phone. */
+.models-layout > .model-list { max-height: max(260px, calc(100dvh - 270px)); overflow-y: auto; scrollbar-width: thin; padding: 2px 6px 2px 2px; overscroll-behavior-y: contain; }
+@media(max-width:900px) { .models-layout > .model-list { max-height: 240px; border-bottom: 1px solid var(--line); padding-bottom: 10px; } }
+
+/* Shared finish: one hierarchy across the working sections. */
+body{background:var(--bg);-webkit-font-smoothing:antialiased}
+.nav>nav>a{transition:background .15s,color .15s}.nav>nav>a.active{background:var(--accent-soft)}.nav>nav>a:hover{background:var(--panel2)}
+.workspace-header h1{letter-spacing:-.7px}.workspace-header{background:transparent}
+#view :is(input,select,textarea){border-radius:8px}#view :is(button,.btn){border-radius:8px}
+#view button:not(.icon-btn){font-weight:500}#view details>summary{list-style-position:outside;margin-left:14px}
+@media(max-width:760px){main{padding-left:14px;padding-right:14px}.workspace-header h1{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.nav>nav>a{transition:none}}

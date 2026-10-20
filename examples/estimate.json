@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "items": [{"line_no":1,"name":"Example service","quantity":"2","days":"3","unit_price":"100.00"}],
+  "financial": {"contract_price":"1000.00","scheme":"direct","has_vat":false,"tax_rate":"0.10","payroll_rate":"0.20","bonus_rate":"0.10"},
+  "payments": []
+}

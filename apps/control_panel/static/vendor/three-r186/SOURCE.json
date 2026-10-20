@@ -1,0 +1,62 @@
+{
+  "repo": "https://github.com/mrdoob/three.js",
+  "tag": "r186",
+  "commit": "9b4a2ac29c63ccb43fd51c5661f2f873ac2c39b8",
+  "modification": "ESM bare three imports rewritten to local relative build path",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1081,
+      "upstream_sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "local_sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "build/three.module.js",
+      "bytes": 662772,
+      "upstream_sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "local_sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "build/three.core.js",
+      "bytes": 1458113,
+      "upstream_sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "local_sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "examples/jsm/controls/OrbitControls.js",
+      "bytes": 40780,
+      "upstream_sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "local_sha256": "2edf5d7099c54de0abb4b90873c98f35eb8984a56c83163527f885f907c17d3c"
+    },
+    {
+      "path": "examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 117595,
+      "upstream_sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "local_sha256": "e2ca07cacfa4f5b0572310bd26dce2deacf8f4dfa375d3020a476448d635dafa"
+    },
+    {
+      "path": "examples/jsm/loaders/OBJLoader.js",
+      "bytes": 22941,
+      "upstream_sha256": "86c8384e269b75a21d502d438e3f0dc2e09dc61b6e6da6b81947f5b119112bf8",
+      "local_sha256": "26b1428ae20972fdefd7dbd3bac1b53eafd31c934a3364e7e77742af32b3e180"
+    },
+    {
+      "path": "examples/jsm/loaders/STLLoader.js",
+      "bytes": 10740,
+      "upstream_sha256": "023ed97f848b633d8bcd53d4db3b996d29d0c644088700691297c552257d480b",
+      "local_sha256": "b9ff91106399a426dc5844405966543deb06e48d019879e4945ae653f72c4ce9"
+    },
+    {
+      "path": "examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 37737,
+      "upstream_sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "local_sha256": "25d8fffde3d48fa5a219e1ff9ffa02566f99222c71e3e57ae979075eaf52f2d6"
+    },
+    {
+      "path": "examples/jsm/utils/SkeletonUtils.js",
+      "bytes": 11560,
+      "upstream_sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "local_sha256": "9e53f7de94e1a632b88113536c1c404e243dac973bad2e8e6d514ff49b569e65"
+    }
+  ]
+}

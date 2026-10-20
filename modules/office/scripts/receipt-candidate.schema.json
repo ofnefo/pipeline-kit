@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Office receipt candidate, no financial approval",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "provenance",
+    "merchant",
+    "date",
+    "currency",
+    "items",
+    "totals",
+    "ambiguities"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_path",
+        "source_sha256",
+        "page_count"
+      ],
+      "properties": {
+        "source_path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "source_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "page_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 100000
+        }
+      }
+    },
+    "merchant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "pages"
+      ],
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000
+          },
+          "uniqueItems": true,
+          "maxItems": 1000
+        }
+      }
+    },
+    "date": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "pages"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000
+          },
+          "uniqueItems": true,
+          "maxItems": 1000
+        }
+      }
+    },
+    "currency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "pages"
+      ],
+      "properties": {
+        "value": {
+          "enum": [
+            null,
+            "RUB",
+            "USD",
+            "EUR",
+            "KZT",
+            "BYN",
+            "CNY",
+            "AMD",
+            "GEL",
+            "AED",
+            "TRY",
+            "руб",
+            "руб.",
+            "₽"
+          ]
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000
+          },
+          "uniqueItems": true,
+          "maxItems": 1000
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "description",
+          "quantity",
+          "unit_price",
+          "discount",
+          "total",
+          "pages"
+        ],
+        "properties": {
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "quantity": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9]{1,9}(?:[.,][0-9]{1,6})?$"
+          },
+          "unit_price": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^(?:[0-9]{1,12}|[0-9]{1,3}(?:[ \\u00a0\\u202f][0-9]{3}){1,3})(?:[.,][0-9]{1,2})?$"
+          },
+          "discount": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^(?:[0-9]{1,12}|[0-9]{1,3}(?:[ \\u00a0\\u202f][0-9]{3}){1,3})(?:[.,][0-9]{1,2})?$"
+          },
+          "total": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^(?:[0-9]{1,12}|[0-9]{1,3}(?:[ \\u00a0\\u202f][0-9]{3}){1,3})(?:[.,][0-9]{1,2})?$"
+          },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100000
+            },
+            "uniqueItems": true,
+            "maxItems": 1000
+          }
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subtotal",
+        "discount",
+        "total",
+        "pages"
+      ],
+      "properties": {
+        "subtotal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9]{1,12}|[0-9]{1,3}(?:[ \\u00a0\\u202f][0-9]{3}){1,3})(?:[.,][0-9]{1,2})?$"
+        },
+        "discount": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9]{1,12}|[0-9]{1,3}(?:[ \\u00a0\\u202f][0-9]{3}){1,3})(?:[.,][0-9]{1,2})?$"
+        },
+        "total": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9]{1,12}|[0-9]{1,3}(?:[ \\u00a0\\u202f][0-9]{3}){1,3})(?:[.,][0-9]{1,2})?$"
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000
+          },
+          "uniqueItems": true,
+          "maxItems": 1000
+        }
+      }
+    },
+    "ambiguities": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      }
+    }
+  }
+}

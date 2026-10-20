@@ -1,0 +1,7 @@
+{
+  "canvas": {"width":640,"height":360,"background":"#182028"},
+  "layers": [
+    {"type":"rectangle","x":40,"y":40,"width":560,"height":280,"fill":"#496B7C"},
+    {"type":"ellipse","x":240,"y":100,"width":160,"height":160,"fill":"#E5C17C"}
+  ]
+}

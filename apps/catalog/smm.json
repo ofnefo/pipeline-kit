@@ -1,0 +1,5 @@
+{
+  "brands": [{"id":"sample", "name":"Sample brand", "about":"Replace with your own brand", "audience":"Your audience", "channels":[]}],
+  "providers": [],
+  "starter_posts": []
+}

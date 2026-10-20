@@ -1,0 +1,916 @@
+{
+  "schema_version": 1,
+  "source_roots": {
+    "control": "Owned Control source repository",
+    "pipelines": "Owned production pipeline sources"
+  },
+  "files": [
+    {
+      "path": "apps/control_panel/app.py",
+      "source": "control",
+      "source_path": "web/app.py",
+      "source_sha256": "9850d4eead6b79a9e9ba205153905db510e040f68f1202db23e08c498ffb6d79",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/converters.py",
+      "source": "control",
+      "source_path": "web/converters.py",
+      "source_sha256": "a0cb379752c2c6a8e27f2626eeeb76ef7f2efe75006e95ab589a926752b36441",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/model_audio.py",
+      "source": "control",
+      "source_path": "web/model_audio.py",
+      "source_sha256": "ed8adeab70ace9f35e7ca969a492ce567079587391cb1f17ebfc16e3447dd596",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/model_controls.py",
+      "source": "control",
+      "source_path": "web/model_controls.py",
+      "source_sha256": "36051a0bf3e1d7f55f09732042880b4f885c43866ff910816fe5ec7e3290cb72",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/model_evidence.py",
+      "source": "control",
+      "source_path": "web/model_evidence.py",
+      "source_sha256": "380d272e4210ee26dcb1ec9aa2a8769f751a59eecdaaee29ec254c669769b997",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/model_style.py",
+      "source": "control",
+      "source_path": "web/model_style.py",
+      "source_sha256": "ff74177cc21901a4e178086ad31eb522ee560546a9d965cbad5302defd069bd5",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/namenode_service.py",
+      "source": "control",
+      "source_path": "web/namenode_service.py",
+      "source_sha256": "8680cd067ad78de2616f1cb098de587e40b504ac3d606108635194715fa413cd",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/project_file_events.py",
+      "source": "control",
+      "source_path": "web/project_file_events.py",
+      "source_sha256": "53ffc2b64a330becbda79117062807af1477f1f1c1113f7919396d030c6e9963",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/project_file_previews.py",
+      "source": "control",
+      "source_path": "web/project_file_previews.py",
+      "source_sha256": "2136f1d311f412cc76a939a18241de6020e9e236a9d8a982a7ed2f3935ca59b0",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/project_files_actions.py",
+      "source": "control",
+      "source_path": "web/project_files_actions.py",
+      "source_sha256": "723bb0cd1954bc35bd610a2b84824818888e37f0085fbf7d0b7ad89ea701e52e",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/project_files_service.py",
+      "source": "control",
+      "source_path": "web/project_files_service.py",
+      "source_sha256": "bd095e95696741c883a2970bd7f0bbd26e4def0c8237012d2f5029e5acfa4e5d",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/run_projects_service.py",
+      "source": "control",
+      "source_path": "web/run_projects_service.py",
+      "source_sha256": "c9a124d3edcf82ddeddef9f2d533eb741b4148234138caab95d8df449fa51a9b",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/smm_service.py",
+      "source": "control",
+      "source_path": "web/smm_service.py",
+      "source_sha256": "dae662569b9c468407c982c9ad814d10602254a87faf6a9cf9559e5456fc9878",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/spec_translator.py",
+      "source": "control",
+      "source_path": "web/spec_translator.py",
+      "source_sha256": "4adde5d7ba23ca0d2d4df81a1df5518a0a40983802949f69ea329975ce95318e",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/app.js",
+      "source": "control",
+      "source_path": "web/static/app.js",
+      "source_sha256": "4cb0477f7f65372015ae281ab3638368ca843c6cf8c23621b8fe752144044041",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/board.css",
+      "source": "control",
+      "source_path": "web/static/board.css",
+      "source_sha256": "d09895615de3ae663234d25e58018198ab0f60b14c3226b4c886acbab7c378d6",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/board.js",
+      "source": "control",
+      "source_path": "web/static/board.js",
+      "source_sha256": "4957e9022b494c7a601bc74e9f22ba6fe687e5b94ee4abe02e1faeb99c78ccc5",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/disclosure.js",
+      "source": "control",
+      "source_path": "web/static/disclosure.js",
+      "source_sha256": "f45b83e7cc8b738c25b547d53d38140c9e8627601080ddc3d23c39226eb1b0b1",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/download-picker.css",
+      "source": "control",
+      "source_path": "web/static/download-picker.css",
+      "source_sha256": "512a4d49033844793247205bafae40625218bf5dc76a1c5a3400fba4fd8a1a48",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/download-picker.js",
+      "source": "control",
+      "source_path": "web/static/download-picker.js",
+      "source_sha256": "ac9c7680c75d564322cc7ba510ccda1abb529473d0efa569fd86b7a86781c1a4",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/editor.html",
+      "source": "control",
+      "source_path": "web/static/editor.html",
+      "source_sha256": "7b8a56564840846094b801a55a8620c2a1ba1b63c099f6ead5a41817400b88d5",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/fonts/OFL-JetBrainsMono.txt",
+      "source": "control",
+      "source_path": "web/static/fonts/OFL-JetBrainsMono.txt",
+      "source_sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/fonts/OFL-Onest.txt",
+      "source": "control",
+      "source_path": "web/static/fonts/OFL-Onest.txt",
+      "source_sha256": "071195d8806e226faeee60259c28ca67b458227af5195a73f5cfcab06e3003bc",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/fonts/jbmono-var.woff2",
+      "source": "control",
+      "source_path": "web/static/fonts/jbmono-var.woff2",
+      "source_sha256": "df2ad96af4cc253200b11be8f2f16b901ca9c6047628af1970a694b48db38f64",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/fonts/onest-var.woff2",
+      "source": "control",
+      "source_path": "web/static/fonts/onest-var.woff2",
+      "source_sha256": "f3025fb264c7005581ff2dfd8ada9717cd3744b4bfe5806d3b7e8b72cac014b4",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/gallery.css",
+      "source": "control",
+      "source_path": "web/static/gallery.css",
+      "source_sha256": "927ab6e6d0458f9a756a086f0255bfc42d4692d8b293286d9c1a4b8ae75fdd57",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/gallery.js",
+      "source": "control",
+      "source_path": "web/static/gallery.js",
+      "source_sha256": "29b256dde64b9cfe76b8e6caf5146bd7ae1745f0dd0512b0a57a938034b91c3e",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/home.js",
+      "source": "control",
+      "source_path": "web/static/home.js",
+      "source_sha256": "1696975a1d0256c881151d2d76312ef7357b1e41d29eff2156c2cf736e6a39cb",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/image-edit.js",
+      "source": "control",
+      "source_path": "web/static/image-edit.js",
+      "source_sha256": "5bc981dc1716f91fd721179f1c7c6905ce570842922d4e1b7571b0c7dc619666",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/index.html",
+      "source": "control",
+      "source_path": "web/static/index.html",
+      "source_sha256": "026aaabc1365cfdf9a749e4ef243b39f7f64281d2c07c58476840530ddc0298a",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/inventory.js",
+      "source": "control",
+      "source_path": "web/static/inventory.js",
+      "source_sha256": "53f741c35e5f542aab7b3be639b51e527fd0ed0b87fd8849b33980a67e75bb7e",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/keys.js",
+      "source": "control",
+      "source_path": "web/static/keys.js",
+      "source_sha256": "a26a06f37353b976c9b6b77a752796b6bb11dc14bab81344a22fdcc1c74b47ff",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/assistant-workspace.css",
+      "source": "control",
+      "source_path": "web/static/mint-workspace.css",
+      "source_sha256": "cb08a0eb05ed46ef1c60dd0e880c574d9e3fb5e8192f85f0d54d6930a093d980",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/assistant-workspace.js",
+      "source": "control",
+      "source_path": "web/static/mint-workspace.js",
+      "source_sha256": "67881537d74a8fc62993c914a2d1f58c4fa00a5cb600e7c674265f0db980a29f",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/models-catalog-ui.js",
+      "source": "control",
+      "source_path": "web/static/models-catalog-ui.js",
+      "source_sha256": "6627e85ade214ce374385ff6a229fa7914f3e56b6d54ef22756ae22163fb198d",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/models-enhance.js",
+      "source": "control",
+      "source_path": "web/static/models-enhance.js",
+      "source_sha256": "a867393ee83721ef813afafd71ab3d909355b950d54860768bfd018866794918",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/models-help-ru.js",
+      "source": "control",
+      "source_path": "web/static/models-help-ru.js",
+      "source_sha256": "0f2d49bf29e979bca44966a3480014bff7c1eca10111cdd99eeae6122d33d1e5",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/models-modes.js",
+      "source": "control",
+      "source_path": "web/static/models-modes.js",
+      "source_sha256": "23773d84a938cfb8b0829e5a7ed3ee2e705db749acc427e804f324fa149ec43b",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/models-workspace.css",
+      "source": "control",
+      "source_path": "web/static/models-workspace.css",
+      "source_sha256": "ba5e19450b166be1f8ee3e8894369da5ff14fff49129ee878fae2c510b05a0d6",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/models.js",
+      "source": "control",
+      "source_path": "web/static/models.js",
+      "source_sha256": "c160470d5a9a4a67c5723505be95748e6774760d6188410c5c0e7cc1c1a84657",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/ops.js",
+      "source": "control",
+      "source_path": "web/static/ops.js",
+      "source_sha256": "5336665b04f0d8f1cd0dfdd5f6508eba50e418a73a4f17ca13ea1c889b955647",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/panel-finish.css",
+      "source": "control",
+      "source_path": "web/static/panel-finish.css",
+      "source_sha256": "fb212299a70b8bb36b8ea269d23efb06304acda5e6a1b4001e76b36578e4a109",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/project-files.js",
+      "source": "control",
+      "source_path": "web/static/project-files.js",
+      "source_sha256": "afd374dee09faf3f41e7de20cdf7cfded34bf972994afe340c7f8c27d925a4a0",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/project-sessions.js",
+      "source": "control",
+      "source_path": "web/static/project-sessions.js",
+      "source_sha256": "77a0cc75ff78d21d36cecc8d66941ea0e29b4b42252625d4bd5901434a0a75b6",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/projects.js",
+      "source": "control",
+      "source_path": "web/static/projects.js",
+      "source_sha256": "37f2893ff3d40c93d971362455000165e5b367c8f6317bfa554858987e11374d",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/quick-tools.css",
+      "source": "control",
+      "source_path": "web/static/quick-tools.css",
+      "source_sha256": "b20bc4c4599bd0ac92381a8a0c0ff45a7935d2bbcf19636cb4f78e1af10ac851",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/quick-tools.js",
+      "source": "control",
+      "source_path": "web/static/quick-tools.js",
+      "source_sha256": "01363098d71164675263696ef48c4c973456fadf57f02dfe8f9a23e291b85d48",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/report-links.js",
+      "source": "control",
+      "source_path": "web/static/report-links.js",
+      "source_sha256": "87b3834941414773a142bb7cee6c07764a59167fd09b1cd6f83c08b22ef7ca67",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/smm.css",
+      "source": "control",
+      "source_path": "web/static/smm.css",
+      "source_sha256": "ec93980c410d64dad31d776ade0812aa42d625714e2e9de8d2c77439698b69a8",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/smm.js",
+      "source": "control",
+      "source_path": "web/static/smm.js",
+      "source_sha256": "ad545e7cb1593db54185cf05e5ec4465cf90dec8bde6c3a2c3c56a8456ea1d37",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/social.css",
+      "source": "control",
+      "source_path": "web/static/social.css",
+      "source_sha256": "6ef41781b6ff4dad47bd9906eff051a8f5fcd2348ab7e4fa547b70c80540a321",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/social.js",
+      "source": "control",
+      "source_path": "web/static/social.js",
+      "source_sha256": "8e5645615dd8fa2b6046e2828a164d42d93fd1b1cfadb7d7f746d487945d2975",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/studio-gen.js",
+      "source": "control",
+      "source_path": "web/static/studio-gen.js",
+      "source_sha256": "2d07fdc2512d3df46ca56d8c47e55d1337ae2739a99d630349c6a0e4b2c5d2ad",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/studio-montage.js",
+      "source": "control",
+      "source_path": "web/static/studio-montage.js",
+      "source_sha256": "a75328485898c8258b370bd751f32517d6bdd0b5258aa79c6fd4dd271df2922e",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/studio.js",
+      "source": "control",
+      "source_path": "web/static/studio.js",
+      "source_sha256": "f9fb55b8e108ce717413227f29162c6c2f8fc73c21e81d91d6481c53b6dec967",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/style.css",
+      "source": "control",
+      "source_path": "web/static/style.css",
+      "source_sha256": "86ebd812448722d5e42c4def8b7c16ae36a0ec6bf01c9b40f4c77678621bedca",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/tags.js",
+      "source": "control",
+      "source_path": "web/static/tags.js",
+      "source_sha256": "00d919dc8c7619d19fd55b04abfce3c95838c5f6a9abf67e94c9fe8b40a81f28",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/theme-3.css",
+      "source": "control",
+      "source_path": "web/static/theme-3.css",
+      "source_sha256": "2dab6d1d775d244f77b5db378409d396ce9646ff576223a8efefa7ac425ce558",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/htm-3.1.1/LICENSE",
+      "source": "control",
+      "source_path": "web/static/vendor/htm-3.1.1/LICENSE",
+      "source_sha256": "740725f7252e750af735d0028cc534970772f513331e9f68150fede8fb3ce00f",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/htm-3.1.1/SOURCE.json",
+      "source": "control",
+      "source_path": "web/static/vendor/htm-3.1.1/SOURCE.json",
+      "source_sha256": "de226d9beb87e391bc95a379fa1e66d3a05c9a1e6af006da36917885c3cac7a7",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/htm-3.1.1/standalone.module.js",
+      "source": "control",
+      "source_path": "web/static/vendor/htm-3.1.1/standalone.module.js",
+      "source_sha256": "72284e8e9079c87817145df1110f74e8a2aa040b2fc384922e18dfcb46fc1fd7",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/LICENSE",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/LICENSE",
+      "source_sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/SOURCE.json",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/SOURCE.json",
+      "source_sha256": "ea371c768b75be9e947635acdbaff43912b3c720209ff2e1e6a4158e8bbf6e63",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/build/three.core.js",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/build/three.core.js",
+      "source_sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/build/three.module.js",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/build/three.module.js",
+      "source_sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/examples/jsm/controls/OrbitControls.js",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/examples/jsm/controls/OrbitControls.js",
+      "source_sha256": "2edf5d7099c54de0abb4b90873c98f35eb8984a56c83163527f885f907c17d3c",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/examples/jsm/loaders/GLTFLoader.js",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/examples/jsm/loaders/GLTFLoader.js",
+      "source_sha256": "e2ca07cacfa4f5b0572310bd26dce2deacf8f4dfa375d3020a476448d635dafa",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/examples/jsm/loaders/OBJLoader.js",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/examples/jsm/loaders/OBJLoader.js",
+      "source_sha256": "26b1428ae20972fdefd7dbd3bac1b53eafd31c934a3364e7e77742af32b3e180",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/examples/jsm/loaders/STLLoader.js",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/examples/jsm/loaders/STLLoader.js",
+      "source_sha256": "b9ff91106399a426dc5844405966543deb06e48d019879e4945ae653f72c4ce9",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/examples/jsm/utils/BufferGeometryUtils.js",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/examples/jsm/utils/BufferGeometryUtils.js",
+      "source_sha256": "25d8fffde3d48fa5a219e1ff9ffa02566f99222c71e3e57ae979075eaf52f2d6",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/vendor/three-r186/examples/jsm/utils/SkeletonUtils.js",
+      "source": "control",
+      "source_path": "web/static/vendor/three-r186/examples/jsm/utils/SkeletonUtils.js",
+      "source_sha256": "9e53f7de94e1a632b88113536c1c404e243dac973bad2e8e6d514ff49b569e65",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/video-review.css",
+      "source": "control",
+      "source_path": "web/static/video-review.css",
+      "source_sha256": "8e41e456b7ee1af1fcb3c54e5cd5ef609e7b7c433913752f82adafe4157cea2d",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/video-review.html",
+      "source": "control",
+      "source_path": "web/static/video-review.html",
+      "source_sha256": "c6b23289586865e2bfc91fd23b2e71abdb34937bd0a99518160f86bde1f7c58e",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/video-review.js",
+      "source": "control",
+      "source_path": "web/static/video-review.js",
+      "source_sha256": "ac3184e2f884f297e5605452bcfc43df7cd66771601de4720202d60abc957837",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/static/workspace.css",
+      "source": "control",
+      "source_path": "web/static/workspace.css",
+      "source_sha256": "abc3c8a43301e7c133bb50e44ec0dd44c40a1acd40ebaeecba25d22c4bcedd48",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/studio_chats.py",
+      "source": "control",
+      "source_path": "web/studio_chats.py",
+      "source_sha256": "dcb9bbc3b2338d3fa2dbcdf700a74245e123fc4fcc17a165ef4c621dfbe38f18",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/studio_llm.py",
+      "source": "control",
+      "source_path": "web/studio_llm.py",
+      "source_sha256": "9fa4c15b4b6bda229ceefa024ad8621c10a2ade3f3752c516a9ed98059efbc73",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/studio_packs.py",
+      "source": "control",
+      "source_path": "web/studio_packs.py",
+      "source_sha256": "ec33def34da9be3b8690b3989c20974f4bcaec2381599029b9a527433cc9ddbc",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/uploads.py",
+      "source": "control",
+      "source_path": "web/uploads.py",
+      "source_sha256": "d7dfb4ff413c48651fbac23add825d9e033336f1a4c12d8bdf60b4d4696d67dd",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/video_contract.py",
+      "source": "control",
+      "source_path": "web/video_contract.py",
+      "source_sha256": "821167dc9d7712c105a4b28c7a40afb00316cab539abff36a00e855fff4be818",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/video_review.py",
+      "source": "control",
+      "source_path": "web/video_review.py",
+      "source_sha256": "918867a9c2b571183b1a7d9c916e63fb95889ceb1532c88f2d7eb5089c8e7784",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/control_panel/workboard.py",
+      "source": "control",
+      "source_path": "web/workboard.py",
+      "source_sha256": "1125bcd3eefa229038a96c6ca0e00febed0bb9b8a1bc2b215650d64df7ea65e2",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/docs/PROJECT_REPORT_TEMPLATE.md",
+      "source": "control",
+      "source_path": "docs/PROJECT_REPORT_TEMPLATE.md",
+      "source_sha256": "c4846c4938ce9a898cb1cec08f2afdf36682c70e25d7bf217df3b9c473b0ed41",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/tools/namenode/namenode.py",
+      "source": "control",
+      "source_path": "tools/namenode/namenode.py",
+      "source_sha256": "9b43c786fd691711844c99a1a361790905f0663e8133635dd27fb4c3e1c59c76",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "apps/tools/workboard/board.py",
+      "source": "control",
+      "source_path": "tools/workboard/board.py",
+      "source_sha256": "eed0ae5b5a7877336f1c20588c08b46a68693d83f948ad14dc2e119015188ba3",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/design/scripts/compose_layers.py",
+      "source": "pipelines",
+      "source_path": "visual/design/plugins/design-pipeline/skills/design-graphic-compositor/scripts/compose_layers.py",
+      "source_sha256": "f5c5e6cc1505a1f9040c56c07fa61e2fd75b8f32d27f52faffb45a1054ddfd85",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/design/scripts/inspect_assets.py",
+      "source": "pipelines",
+      "source_path": "visual/design/plugins/design-pipeline/skills/design-graphic-compositor/scripts/inspect_assets.py",
+      "source_sha256": "3f1d63f35fde2f59c4d06265985bc5c83f264d82c31d3c52734bd517460bcc73",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/design/scripts/make_contact_sheet.py",
+      "source": "pipelines",
+      "source_path": "visual/design/plugins/design-pipeline/skills/design-graphic-compositor/scripts/make_contact_sheet.py",
+      "source_sha256": "e55f99d23e6a60c42deaa3b3b94da5b03bed5da78f687cc0a3479f8858fd3dd1",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/design/scripts/preflight_print.py",
+      "source": "pipelines",
+      "source_path": "visual/design/plugins/design-pipeline/skills/design-production-preflight/scripts/preflight_print.py",
+      "source_sha256": "b242cc0bec084f250fad26eed732f296989470ba14380ab05d84778a3b2bea46",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/design/scripts/test_preflight_print.py",
+      "source": "pipelines",
+      "source_path": "visual/design/plugins/design-pipeline/skills/design-production-preflight/scripts/test_preflight_print.py",
+      "source_sha256": "fc681b3c181f28cb6c75635ff38d0566a443121e4492631a1ff8098e9583ca8c",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/music/scripts/lyric_preflight.py",
+      "source": "pipelines",
+      "source_path": "audio/music/scripts/lyric_preflight.py",
+      "source_sha256": "08d2cd9a3ac17c2d0e5402d71e86693ef40b5b579f7ebc8a1d0e205654422a40",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/music/scripts/master_audio.py",
+      "source": "pipelines",
+      "source_path": "audio/music/scripts/master_audio.py",
+      "source_sha256": "4025bb572505d815cb3bfaf5a39628fea44b5085a762a9ac49cdb6128bfec892",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/music/scripts/media_tools.py",
+      "source": "pipelines",
+      "source_path": "audio/music/scripts/media_tools.py",
+      "source_sha256": "853b34a685f0476440e026c6d9fb8e9b6b9a7625ba73c766b505674e7d02a770",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/music/scripts/music_paths.py",
+      "source": "pipelines",
+      "source_path": "audio/music/scripts/music_paths.py",
+      "source_sha256": "5ec2a816ddd6c7ab2055f77355697e326027f92583c1d8f5e7246b2a60a03bbf",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/music/scripts/ru_pronunciation.py",
+      "source": "pipelines",
+      "source_path": "audio/music/scripts/ru_pronunciation.py",
+      "source_sha256": "35673fc8fe9a37babf0304741aa60ed60747c83753507a85315ded34f12808b5",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/document_inventory.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-document-intake/scripts/document_inventory.py",
+      "source_sha256": "4b62cfd6766edf306d72a8633540ac3cf5bcca096ecd01d4ba816c2f591431c1",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/document_profiles.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/document_profiles.py",
+      "source_sha256": "b2b674058b911c1dbdd37d666aba337ba33dda7e711e876d488e64af8ff48c6f",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/estimate_engine.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/estimate-production/scripts/estimate_engine.py",
+      "source_sha256": "6668cbfc9b0e24853bbf02cce5320e0677413a87af44e8e377a3284ce8fce1ea",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/extract_source.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-document-intake/scripts/extract_source.py",
+      "source_sha256": "34c3586ab38a0d9b138f8db69991481045a3da25cdfeb3cefbef64e1799ebc39",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/normcontrol.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/normcontrol.py",
+      "source_sha256": "e230d1d17f4330451b46bb8dc2237c900f5aaac0de81ccfbbf6125daaefb4724",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/office_delivery.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/office_delivery.py",
+      "source_sha256": "5c619d78b70fbcd88719c0ed424f2df27040e991be1bdc9e3f42ca0cba63332f",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/office_project.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/office_project.py",
+      "source_sha256": "dfe59b7a43409277c67f18385218ed8a2d239262983f8a59f3df6137bc660509",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/prepare_proposal.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/commercial-document-production/scripts/prepare_proposal.py",
+      "source_sha256": "f38287c361d0c34976ad50792516862bebdac1242f953d5a4a33d7dcdacedddb",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/project_checks.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/project_checks.py",
+      "source_sha256": "843d2755c7a0498089e7f10f24f5ea3d17e5f50662725d77008780dfed03bc62",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/receipt-candidate.schema.json",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-document-intake/scripts/receipt-candidate.schema.json",
+      "source_sha256": "f3c6df477cdab96754483a625a21d0fa956611f36195d15e327964d4141374f4",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/receipt_adapter.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-document-intake/scripts/receipt_adapter.py",
+      "source_sha256": "dba91a33d4cdd3fab0f3a159c2cb4c54aa6b3fdd4a768c91710c046e7c72fb49",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/schemas/document-profiles.schema.json",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/schemas/document-profiles.schema.json",
+      "source_sha256": "9dd2155dc79a8e3848a81dfed66ad6cdd5cbd905ea216723bb7aad9b6d13099a",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/schemas/normcontrol.schema.json",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/schemas/normcontrol.schema.json",
+      "source_sha256": "1ad6bd57be50e09df4bd56c91aea7b77be49ce3e774afd53332cc2d553706d23",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/schemas/organization-profile.schema.json",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/schemas/organization-profile.schema.json",
+      "source_sha256": "e0b6207e0611ffdd54800b71163053108ff2bfb1639bbc819a60532fdd54eb40",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/schemas/ttn.schema.json",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/schemas/ttn.schema.json",
+      "source_sha256": "bca6327c8e2ed0132170731b3e4d353522dfe1c4fa8fa17bea3cb5f9e9f44fb7",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/spreadsheet_findings.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/spreadsheet_findings.py",
+      "source_sha256": "5ddacfedd2824ee049ea8e9c224d192b2d768a0f876eac30bfee77c71c385b99",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/scripts/ttn.py",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/skills/office-pipeline/scripts/ttn.py",
+      "source_sha256": "96c6380e2d9ae70befd360013c289c48d175d2151d3d2f27cafbf76b9a67c378",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПАЙПЛАЙН/00_БЫСТРЫЙ_СТАРТ.md",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПАЙПЛАЙН/00_БЫСТРЫЙ_СТАРТ.md",
+      "source_sha256": "9c7f56c5ce6561acaf8a7e8b2ba8bd078f2b4f1e60bf7b3466c8efb59eb58cc6",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПАЙПЛАЙН/01_ПРОЦЕСС_РАБОТЫ.md",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПАЙПЛАЙН/01_ПРОЦЕСС_РАБОТЫ.md",
+      "source_sha256": "9a3cededa5a938a8eb0d84b6806b2e6e8f79c4ebe2c99274d89c95a2f5802997",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПАЙПЛАЙН/README.md",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПАЙПЛАЙН/README.md",
+      "source_sha256": "c92fa3be535da20647fa32070efa764a20dba802b1c0c481de06a13e1805e246",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПАЙПЛАЙН/schemas/estimate.schema.json",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПАЙПЛАЙН/schemas/estimate.schema.json",
+      "source_sha256": "e86f606e3435fa79245f8718ace3edb1ee49e5dc00a753d8a6727b95a647c73f",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПАЙПЛАЙН/schemas/office-project.schema.json",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПАЙПЛАЙН/schemas/office-project.schema.json",
+      "source_sha256": "7de4878bf66353f9a32b173d1cd1560636d58d73315f55c2fa06d0084704a2d4",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/01_БРИФ/BRIEF.md",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/01_БРИФ/BRIEF.md",
+      "source_sha256": "50f657d016ac59f6e308ed9207e2d0e8c88eb15294be1ebc42826db98a9f3364",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/02_СМЕТА/estimate.json",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/02_СМЕТА/estimate.json",
+      "source_sha256": "8b236390d5ecd53de58dc1920abf81bda56096f5845bca7868c142ad33434bee",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/03_ДОКУМЕНТЫ/register.csv",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/03_ДОКУМЕНТЫ/register.csv",
+      "source_sha256": "f59d116af3476651a0682ec42a1148eafb711e45edf759bf11f1e3641bf112ab",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/04_ОПЛАТЫ/payments.csv",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/04_ОПЛАТЫ/payments.csv",
+      "source_sha256": "81e8a5f5cb2d9d6f1d505312db8f1984aeebdda53300c87dce1cdae03352bab9",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/office/templates/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/OFFICE_PROJECT.json",
+      "source": "pipelines",
+      "source_path": "office/plugins/office-pipeline/assets/workspace-template/ПРОЕКТЫ/ШАБЛОН_ПРОЕКТА/OFFICE_PROJECT.json",
+      "source_sha256": "312274f7db43b92ebae8ca39de7b1670125826c38f0315d39d842b1d1508af05",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/video/config/video-mode-contract.json",
+      "source": "pipelines",
+      "source_path": "visual/video/config/video-mode-contract.json",
+      "source_sha256": "44e4e5f4dbabe965bd88e8ab6e10eb002f346df1dad98993546d280678c7d8d8",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/video/scripts/editorial.py",
+      "source": "pipelines",
+      "source_path": "visual/video/scripts/editorial.py",
+      "source_sha256": "8e98be393d4818e49ce2dbe3fd0d0473c149b0a3556b431bc31e8621a6c89ec1",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/video/scripts/montage.py",
+      "source": "pipelines",
+      "source_path": "visual/video/scripts/montage.py",
+      "source_sha256": "5f3355deb5d9ab42b85671fd7fd4512b33d5e7c919fbb8399895709fcf1f2cb8",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/video/scripts/montage_audio.py",
+      "source": "pipelines",
+      "source_path": "visual/video/scripts/montage_audio.py",
+      "source_sha256": "c51ab05344c97f77f2f12d33c4a0350659f06b140c15475550686cca7a14c116",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    },
+    {
+      "path": "modules/video/scripts/video_pipeline.py",
+      "source": "pipelines",
+      "source_path": "visual/video/scripts/video_worker.py",
+      "source_sha256": "0b6bd6040a3fcba2bc19749ecf22f67f1c031c3d61e97e3dbd18ab79d73f95ce",
+      "adaptation": "Portable curated source; see file diff and release manifest",
+      "selected_symbols": [
+        "append_render",
+        "checked_project",
+        "probe",
+        "run",
+        "sha",
+        "sha256",
+        "utc_now"
+      ]
+    },
+    {
+      "path": "modules/web/scripts/seo_growth.py",
+      "source": "pipelines",
+      "source_path": "apps/web/tools/seo_growth.py",
+      "source_sha256": "a99781c70d54780f537bfaf3f172b0e78d3c18f30eddcf07c161ea2ef06ba851",
+      "adaptation": "Portable curated source; see file diff and release manifest"
+    }
+  ],
+  "new_files": "Other files are authored for this portable distribution. The exact built file hashes are in BUILD_MANIFEST.json.",
+  "skills": "Portable skills are new curated instructions for the selected modules; no plugin cache or personal profiles copied."
+}

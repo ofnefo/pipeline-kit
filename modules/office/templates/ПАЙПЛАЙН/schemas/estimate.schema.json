@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/office-pipeline/estimate.schema.json",
+  "title": "Office Pipeline estimate",
+  "type": "object",
+  "required": ["schema_version", "version", "financial", "items", "payments", "manual_credit_accruals"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "version": {
+      "type": "object",
+      "required": ["id", "status"],
+      "properties": {
+        "id": {"type": "string"},
+        "status": {"enum": ["working", "review", "approved", "superseded"]},
+        "created": {"type": ["string", "null"], "format": "date"},
+        "basis": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "financial": {"type": "object"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "line_no": {"type": ["integer", "string"]},
+          "category": {"type": "string"},
+          "name": {"type": "string", "minLength": 1},
+          "contractor": {"type": "string"},
+          "quantity": {"type": ["string", "number"]},
+          "days": {"type": ["string", "number", "null"]},
+          "unit": {"type": "string"},
+          "unit_price": {"type": ["string", "number"]},
+          "amount": {"type": ["string", "number", "null"]},
+          "comment": {"type": "string"},
+          "source": {"type": "string"},
+          "verified_at": {"type": ["string", "null"], "format": "date-time"}
+        }
+      }
+    },
+    "payments": {"type": "array", "items": {"type": "object"}},
+    "manual_credit_accruals": {"type": "array", "items": {"type": "object"}}
+  }
+}

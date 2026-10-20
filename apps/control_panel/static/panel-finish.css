@@ -1,0 +1,17 @@
+/* Shared visual shell: preserve every route and working interaction. */
+:root {--radius:11px;}
+body {background:var(--bg);}
+.nav {background:var(--nav-bg,var(--panel));border-color:var(--line);}
+.brand {padding:4px 2px 10px;}.brand b {font-size:14px;letter-spacing:-.2px;}.logo {border-radius:9px;box-shadow:0 4px 20px var(--accent-soft);}
+.nav > nav > a {min-height:39px;color:var(--muted);transition:background .15s,color .15s;}
+.nav > nav > a.active {background:var(--accent-soft);color:var(--text);box-shadow:inset 3px 0 var(--accent);}
+.nav > nav > a.active svg {color:var(--accent);}.nav svg {width:18px;height:18px;display:block;}
+.nav .nav-label {font-size:10px;letter-spacing:.6px;padding-top:18px;}
+.section-search {background:var(--field);border:1px solid var(--line);color:var(--muted);border-radius:8px;}
+main > .workspace-header {padding-bottom:22px;margin-bottom:24px;border-color:var(--line);}
+.workspace-header h1 {font-size:30px;letter-spacing:-.8px;font-weight:650;line-height:1.2;}
+.workspace-actions button {border-radius:8px;}
+.card {border-color:var(--line);}
+button:focus-visible,a:focus-visible,summary:focus-visible {outline:2px solid var(--accent);outline-offset:3px;}
+@media(prefers-reduced-motion:reduce){.nav > nav > a {transition:none;}}
+@media(max-width:760px){.workspace-header h1{font-size:26px;}main > .workspace-header{margin-bottom:16px;}.nav{background:var(--nav-bg,var(--panel));}.nav > nav > a{min-height:52px;}.nav > nav > a.active{box-shadow:inset 0 2px var(--accent);}.nav svg{margin:auto;}.nav .nav-label{display:none;}}

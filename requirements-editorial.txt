@@ -1,0 +1,2 @@
+-r requirements.txt
+opentimelineio==0.17.0

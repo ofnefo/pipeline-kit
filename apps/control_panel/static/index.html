@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Control Pipeline</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('pc-theme')||'dark'}catch(e){}</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='6' width='52' height='52' rx='14' fill='%233fe0c5'/%3E%3Cpath d='M22 20h20v12H22v14' stroke='%2304201b' stroke-width='6' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="/static/fonts/onest-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/gallery.css?v=gallery-curated-20261020b">
+  <link rel="stylesheet" href="/static/style.css?v=c3-20261019">
+  <link rel="stylesheet" href="/static/board.css?v=workspace-20261013">
+  <link rel="stylesheet" href="/static/quick-tools.css?v=c3-20261019">
+  <link rel="stylesheet" href="/static/smm.css?v=w3s-20261019">
+  <link rel="stylesheet" href="/static/workspace.css?v=c3-20261019">
+  <link rel="stylesheet" href="/static/assistant-workspace.css?v=20261013">
+  <link rel="stylesheet" href="/static/panel-finish.css?v=c3-20261019">
+  <link rel="stylesheet" href="/static/models-workspace.css?v=c3-20261019n">
+  <link rel="stylesheet" href="/static/theme-3.css?v=c3-20261019u">
+</head>
+<body data-mint-delivery="off" data-workspace="home">
+  <a class="skip-link" href="#view">К содержимому</a>
+  <aside class="nav" id="main-navigation">
+    <div class="brand"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7h8v5H8v6"/></svg></span><div><b>Control Pipeline</b><small id="ver">3.0</small></div></div>
+    <nav aria-label="Разделы панели">
+      <a href="#home" data-tab="home" data-primary><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></svg></span>Главная</a>
+      <span class="nav-label">Работа</span>
+      <a href="#studio" data-tab="studio" data-primary><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19"/></svg></span>Студия</a>
+      <a href="#gallery" data-tab="gallery"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span>Результаты</a>
+      <a href="#models" data-tab="models" data-primary><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></svg></span>Модели</a>
+      <a href="#montage" data-tab="montage"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 17h16M7 4v6M17 14v6M12 4v16"/></svg></span>Монтаж</a>
+      <a href="#quick" data-tab="quick"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 4 6 6M4 20l4-1L20 7l-3-3L5 16z"/></svg></span>Конвертеры</a>
+      <a href="#board" data-tab="board" data-primary><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM9 4v16M15 4v16"/></svg></span>Задачи</a>
+      <a href="#projects" data-tab="projects"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h7l2-3h9v16H3z"/></svg></span>Проекты</a>
+      <a href="#smm" data-tab="smm"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h4l12-6v16l-12-6H4zM8 14v6"/></svg></span>SMM</a>
+      <a href="#mint" data-tab="mint"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 9-9 9-9-9zM8 12h8"/></svg></span>Assistant</a>
+      <span class="nav-label">Система</span>
+      <a href="#health" data-tab="health"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></span>Здоровье</a>
+      <a href="#server" data-tab="server"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h16v7H4zM4 14h16v7H4zM7 6h1M7 17h1"/></svg></span>Сервер</a>
+      <a href="#gpu" data-tab="gpu"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6h12v12H6zM9 9h6v6H9zM9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M18 9h4M2 15h4M18 15h4"/></svg></span>GPU</a>
+      <a href="#downloads" data-tab="downloads"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg></span>Загрузки</a>
+      <a href="#agents" data-tab="agents"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 6 6-6 6M13 18h7"/></svg></span>Агенты</a>
+      <a href="#tools" data-tab="tools"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5a5 5 0 0 0-6 6l-5 6 4 4 6-5a5 5 0 0 0 6-6l-3 3-4-4z"/></svg></span>Навыки</a>
+      <a href="#settings" data-tab="settings"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></span>Настройки</a>
+      <a href="/auth/security" id="security-link" title="Устройства и сессии входа" hidden><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6z"/></svg></span>Безопасность</a>
+      <button type="button" id="nav-more" class="nav-more" aria-expanded="false" aria-controls="main-navigation"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h.01M12 12h.01M19 12h.01"/></svg></span>Ещё</button>
+    </nav>
+    <div class="foot">
+      <a class="foot-store" id="foot-store" href="#server/storage" title="Хранилище на локальном узле"><span>Хранилище</span><b id="foot-store-val">—</b><i><em></em></i></a>
+      <span class="foot-who">Operator · локальная рабочая область</span>
+    </div>
+  </aside>
+  <main>
+    <div class="topbar">
+      <button type="button" id="section-search" class="section-search" aria-haspopup="dialog" aria-label="Найти раздел или действие"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-4-4"/></svg><span>Найти раздел или действие</span><kbd>Ctrl K</kbd></button>
+      <div class="chips" aria-label="Состояние локального узла">
+        <a class="chip" id="chip-gpu" href="#gpu" title="Видеокарта локального узла"><i></i>GPU <b>—</b></a>
+        <a class="chip" id="chip-ram" href="#health" title="Оперативная память локального узла"><i></i>RAM <b>—</b></a>
+        <a class="chip" id="chip-comfy" href="#server" title="ComfyUI на локальном узле"><i></i>ComfyUI <b>—</b></a>
+      </div>
+      <div class="workspace-actions">
+        <span id="updated" role="status" aria-live="polite">Загрузка…</span>
+        <button type="button" id="refresh" class="ghost" title="Обновить раздел" aria-label="Обновить раздел"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg></button>
+        <button type="button" id="theme-toggle" class="icon-btn ghost" title="Сменить тему" aria-label="Сменить тему"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+        <a id="bell" class="icon-btn" href="#home" title="Требует внимания" aria-label="Требует внимания"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></svg><span class="count" hidden>0</span></a>
+        <button type="button" id="nav-toggle" class="ghost" aria-controls="main-navigation" aria-expanded="true" aria-label="Свернуть меню" title="Свернуть меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM9 4v16"/></svg></button>
+      </div>
+    </div>
+    <header class="workspace-header"><h1 id="title">Главная</h1><p id="subtitle"></p></header>
+    <section id="view" tabindex="-1" aria-label="Содержимое раздела"><div class="workspace-loading" role="status">Загружаем…</div></section>
+  </main>
+  <dialog id="modal"><form method="dialog"><h3 id="m-title"></h3><div id="m-body"></div>
+    <menu><button value="cancel" class="ghost">Закрыть</button><button id="m-ok" value="ok" hidden>Подтвердить</button></menu></form></dialog>
+  <dialog id="section-dialog" aria-labelledby="section-dialog-title"><div class="section-dialog-head"><h2 id="section-dialog-title">Перейти в раздел</h2><button type="button" class="ghost" id="section-close" aria-label="Закрыть поиск">✕</button></div><label for="section-query">Название или действие</label><input id="section-query" type="search" autocomplete="off" placeholder="Видео, задачи, конвертация, диск…"><div id="section-results"></div></dialog>
+  <script src="/static/app.js?v=gallery-curated-20261020b" type="module"></script>
+</body>
+</html>

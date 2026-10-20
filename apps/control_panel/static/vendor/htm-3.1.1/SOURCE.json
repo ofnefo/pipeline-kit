@@ -1,0 +1,23 @@
+{
+  "package": "htm",
+  "version": "3.1.1",
+  "license": "Apache-2.0",
+  "bundles": "htm + Preact + preact/hooks (single ESM file, no imports)",
+  "modification": "none",
+  "files": [
+    {
+      "path": "standalone.module.js",
+      "url": "https://unpkg.com/htm@3.1.1/preact/standalone.module.js",
+      "bytes": 13194,
+      "upstream_sha256": "72284e8e9079c87817145df1110f74e8a2aa040b2fc384922e18dfcb46fc1fd7",
+      "local_sha256": "72284e8e9079c87817145df1110f74e8a2aa040b2fc384922e18dfcb46fc1fd7"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://unpkg.com/htm@3.1.1/LICENSE",
+      "bytes": 11341,
+      "upstream_sha256": "740725f7252e750af735d0028cc534970772f513331e9f68150fede8fb3ce00f",
+      "local_sha256": "740725f7252e750af735d0028cc534970772f513331e9f68150fede8fb3ce00f"
+    }
+  ]
+}

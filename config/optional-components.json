@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "auto_install": false,
+  "auto_launch": false,
+  "components": [
+    {"id":"ffmpeg", "upstream":"https://ffmpeg.org/download.html", "executables":["ffmpeg","ffprobe"], "used_for":"Video montage, audio mastering and media conversions", "gpu_required":false},
+    {"id":"libreoffice", "upstream":"https://www.libreoffice.org/download/download-libreoffice/", "executables":["soffice"], "used_for":"Office documents to PDF"},
+    {"id":"pandoc", "upstream":"https://pandoc.org/installing.html", "executables":["pandoc"], "used_for":"Markdown and document conversion"},
+    {"id":"opendaw", "upstream":"https://opendaw.org/", "used_for":"Optional external audio editor; no bundled installation"},
+    {"id":"local-chat", "upstream":"https://github.com/ggml-org/llama.cpp", "protocol":"OpenAI-compatible HTTP chat/completions on loopback", "enabled":false, "used_for":"Studio chat only"}
+  ],
+  "python_optional": {
+    "pdf": "PyMuPDF; review its upstream licensing before selecting a distribution",
+    "office": "python-docx, openpyxl, lxml; install in a separate production environment",
+    "editorial_otio": "opentimelineio; required only for editorial timeline export"
+  }
+}

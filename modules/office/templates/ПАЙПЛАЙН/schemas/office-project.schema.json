@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/office-pipeline/office-project.schema.json",
+  "title": "Office Pipeline project",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project",
+    "pipeline",
+    "files",
+    "approvals"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "code",
+        "name",
+        "mode",
+        "status",
+        "currency"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 64
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "enum": [
+            "commercial",
+            "fz44",
+            "internal"
+          ]
+        },
+        "status": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "end_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        }
+      }
+    },
+    "pipeline": {
+      "type": "object",
+      "required": [
+        "current_gate",
+        "rules"
+      ],
+      "properties": {
+        "current_gate": {
+          "enum": [
+            "intake",
+            "estimate_lock",
+            "document_plan",
+            "review",
+            "delivery"
+          ]
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "files": {
+      "type": "object",
+      "required": [
+        "estimate_json",
+        "estimate_workbook",
+        "documents_register",
+        "payments_register",
+        "delivery_dir"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "approvals": {
+      "type": "object",
+      "required": [
+        "estimate",
+        "documents",
+        "delivery"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "tax_basis": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

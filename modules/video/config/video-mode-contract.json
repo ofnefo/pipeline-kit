@@ -1,0 +1,6 @@
+{
+  "schema": "video-mode-contract/1",
+  "modes": [],
+  "available": false,
+  "reason": "No generation workflows or worker binaries included. CPU editorial tools remain available."
+}
