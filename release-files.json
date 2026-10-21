@@ -107,9 +107,11 @@
     "config/card.example.json",
     "config/model-profile.example.json",
     "config/optional-components.json",
+    "config/setup-profiles.json",
     "config/workspace.example.json",
     "docs/AGENT-SETUP.ru.md",
     "docs/AGENTS.md",
+    "docs/AUTO-SETUP.ru.md",
     "docs/CONFIGURATION.md",
     "docs/MODELS.ru.md",
     "docs/MODULES.md",
@@ -183,8 +185,10 @@
     "tests/test_local_chat.py",
     "tests/test_modules.py",
     "tests/test_release.py",
+    "tests/test_setup_skills.py",
     "tools/browser_check.py",
     "tools/media_check.py",
-    "tools/release.py"
+    "tools/release.py",
+    "tools/setup_skills.py"
   ]
 }

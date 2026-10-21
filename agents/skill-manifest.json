@@ -3,5 +3,5 @@
   "skills_root": "skills",
   "primary": ["pipeline-control", "office-production", "graphic-production", "video-editing", "audio-finishing", "web-evidence"],
   "auxiliary": ["release-review"],
-  "installation": "Explicit operator copy or symlink; no global agent configuration is modified automatically."
+  "installation": "Agent-led profile selection and project installation via tools/setup_skills.py; see docs/AUTO-SETUP.ru.md. No global agent configuration is modified automatically."
 }

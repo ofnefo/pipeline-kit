@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "description": "Selections for agent-led setup; not a Control Panel runtime configuration.",
+  "profiles": {
+    "editing": {"skills": ["video-editing", "audio-finishing"], "requirements": [], "apps": ["FFmpeg"], "models": []},
+    "graphics": {"skills": ["graphic-production"], "requirements": [], "apps": [], "models": []},
+    "office": {"skills": ["office-production"], "requirements": ["requirements-office.txt"], "apps": [], "models": []},
+    "web": {"skills": ["web-evidence"], "requirements": [], "apps": [], "models": []},
+    "local-chat": {"skills": [], "requirements": [], "apps": ["Ollama or existing compatible local server"], "models": ["One hardware-compatible text model; recipe: qwen3:4b"]},
+    "image-generation": {"skills": ["graphic-production"], "requirements": [], "apps": ["ComfyUI in a separate environment"], "models": ["One selected workflow and its required weights"]},
+    "3d": {"skills": [], "requirements": [], "apps": ["Blender"], "models": []},
+    "site-monitoring": {"skills": [], "requirements": [], "apps": ["Separate monitoring service selected by owner"], "models": []}
+  },
+  "panel_skills": ["pipeline-control", "release-review"]
+}
