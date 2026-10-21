@@ -1,4 +1,4 @@
-"""Plan selected routes and install bundled project skills, without overwrites.
+"""Plan selected routes and install bundled or catalog project skills, without overwrites.
 
 This helper never downloads apps/models, starts services or edits client rules.
 The agent executes the remaining setup recipes in docs/AUTO-SETUP.ru.md.
@@ -32,7 +32,29 @@ def tree_hashes(path):
     return result
 
 
-def setup(project, client, panel, profiles, apply=False):
+def skill_source(name):
+    """Bundled skills/<name> first, then an authored entry of catalog/index.json."""
+    if name != Path(name).name or name in ('.', '..'):
+        raise ValueError(f'Invalid skill name: {name}')
+    bundled = ROOT / 'skills' / name
+    if (bundled / 'SKILL.md').is_file():
+        return bundled
+    index = json.loads((ROOT / 'catalog/index.json').read_text('utf-8'))
+    for entry in index['skills']:
+        if entry['name'] != name:
+            continue
+        if entry['kind'] != 'authored':
+            raise ValueError(f'Third-party skill {name}: install it from upstream {entry["upstream"]}')
+        plain_path(ROOT / entry['path'])
+        source = (ROOT / entry['path']).resolve()
+        if not source.is_relative_to((ROOT / 'catalog/skills').resolve()):
+            raise ValueError(f'Catalog path escapes catalog/skills: {name}')
+        if (source / 'SKILL.md').is_file():
+            return source
+    raise ValueError(f'Missing bundled or catalog skill: {name}')
+
+
+def setup(project, client, panel, profiles, apply=False, extra_skills=()):
     if not project.is_absolute():
         raise ValueError('--project must be an absolute path')
     plain_path(project)
@@ -44,7 +66,7 @@ def setup(project, client, panel, profiles, apply=False):
     unknown = set(selected) - catalog['profiles'].keys()
     if unknown:
         raise ValueError(f'Unknown profiles: {sorted(unknown)}')
-    skills = set(catalog['panel_skills'] if panel == 'tasks' else [])
+    skills = set(catalog['panel_skills'] if panel == 'tasks' else []) | set(extra_skills)
     requirements, apps, models = {'requirements.txt'}, set(), set()
     for key in selected:
         route = catalog['profiles'][key]
@@ -56,11 +78,8 @@ def setup(project, client, panel, profiles, apply=False):
     # Preflight every destination before writing any skill. Existing differing
     # content belongs to the operator; never replace or merge it implicitly.
     for name in sorted(skills):
-        if name != Path(name).name or name in ('.', '..'):
-            raise ValueError(f'Invalid skill name: {name}')
-        source = ROOT / 'skills' / name
-        if not (source / 'SKILL.md').is_file():
-            raise ValueError(f'Missing bundled skill: {name}')
+        source = skill_source(name)
+        plain_path(source)
         hashes = tree_hashes(source)
         for target_client in clients:
             target = project / destinations[target_client] / name
@@ -91,10 +110,11 @@ def main():
     parser.add_argument('--client', choices=['codex', 'claude', 'both'], required=True)
     parser.add_argument('--panel', choices=['tasks', 'none'], required=True)
     parser.add_argument('--profiles', nargs='*', default=[])
-    parser.add_argument('--apply', action='store_true', help='Copy selected bundled skills into the project')
+    parser.add_argument('--skills', nargs='*', default=[], help='Extra skills by name from catalog/index.json (see docs/SKILLS.ru.md)')
+    parser.add_argument('--apply', action='store_true', help='Copy selected bundled and catalog skills into the project')
     args = parser.parse_args()
     try:
-        print(json.dumps(setup(args.project, args.client, args.panel, args.profiles, args.apply), ensure_ascii=True, indent=2))
+        print(json.dumps(setup(args.project, args.client, args.panel, args.profiles, args.apply, args.skills), ensure_ascii=True, indent=2))
     except (ValueError, OSError) as error:
         parser.exit(1, f'{error}\n')
 

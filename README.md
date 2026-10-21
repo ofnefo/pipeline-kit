@@ -11,12 +11,13 @@
 - **Панель управления** — проекты, доска задач, студия с чатами и монтажом, 23 конвертера, мобильная версия.
 - **NameNode** — карта проектов для агентов: карточки, захват работы (claim), журнал, почта между агентами.
 - **8 готовых скиллов** для Codex и Claude Code: от доски задач до печатной графики и сведения звука.
+- **[Каталог скиллов](docs/SKILLS.ru.md): 69 авторских** по дизайну, видео, музыке, играм, офису, вебу, Telegram и SMM, плюс **55 проверенных сторонних** со ссылкой на upstream и лицензией.
 - **5 производственных модулей**: офис, графика, видео, звук, веб. Это 27 скриптов, все работают локально.
 - **Автонастройка силами агента.** Агент опрашивает владельца, изучает компьютер и сам ставит только нужное: 8 профилей установки.
 
 Без облака, подписок и телеметрии. Ничего не запускается само: внешние модели, GPU и платные вызовы подключаются отдельно и только по вашему решению.
 
-> **English summary.** Pipeline Kit is a local-first control room for AI coding agents (Codex, Claude Code) working on shared creative and office projects. It bundles a FastAPI control panel (projects, task board, studio, converters, mobile UI), NameNode (project cards, work claims, journal and agent-to-agent mailbox), 8 agent skills, and 27 CPU scripts for estimates, layered graphics, print preflight, FFmpeg montage, loudness mastering and offline SEO/UTM. No cloud calls, no telemetry. Python 3.12. UI and docs are in Russian; module reference is in English ([docs/MODULES.md](docs/MODULES.md)).
+> **English summary.** Pipeline Kit is a local-first control room for AI coding agents (Codex, Claude Code) working on shared creative and office projects. It bundles a FastAPI control panel (projects, task board, studio, converters, mobile UI), NameNode (project cards, work claims, journal and agent-to-agent mailbox), 8 agent skills plus a catalog of 69 authored and 55 vetted third-party skills ([docs/SKILLS.ru.md](docs/SKILLS.ru.md)), and 27 CPU scripts for estimates, layered graphics, print preflight, FFmpeg montage, loudness mastering and offline SEO/UTM. No cloud calls, no telemetry. Python 3.12. UI and docs are in Russian; module reference is in English ([docs/MODULES.md](docs/MODULES.md)).
 
 ---
 
@@ -211,6 +212,8 @@ python pipeline_kit.py doctor
 
 Скиллы — это инструкции и проверочные списки, которые Codex и Claude Code подгружают под конкретную задачу. Один `SKILL.md` подходит обоим агентам. Установка без перезаписи ваших файлов: `python tools/setup_skills.py --project <папка> --client both --panel tasks --profiles editing office` (сначала план, затем `--apply`). Подробности — в [AGENT-SETUP](docs/AGENT-SETUP.ru.md).
 
+Полный каталог — в [docs/SKILLS.ru.md](docs/SKILLS.ru.md): 69 авторских скиллов по разделам и 55 сторонних (ссылка на коммит и лицензия, файлы не копируются). Авторский скилл из каталога ставится по имени: `python tools/setup_skills.py --project <папка> --client both --panel none --skills comfy web-qa` (сначала план, затем `--apply`).
+
 | Скилл | Когда агент его берёт |
 | --- | --- |
 | `pipeline-control` | Проект, доска задач, карточка NameNode, студия, файлы проекта |
@@ -244,6 +247,7 @@ apps/control_panel   панель: FastAPI + статический фронте
 apps/tools           CLI для агентов: namenode, workboard
 modules/             office · design · video · music · web — 27 скриптов
 skills/              8 скиллов для Codex и Claude Code
+catalog/             каталог: 69 авторских скиллов по разделам и index.json со сторонними
 agents/              шаблон AGENTS.md, задание на автонастройку, политика моделей
 config/              профили установки, примеры карточки, рабочей папки и receipt
 examples/            входные данные для примеров выше
@@ -265,6 +269,7 @@ tools/               проверка браузером и медиа, уста
 - [Автонастройка силами агента: опрос, разведка среды, установка](docs/AUTO-SETUP.ru.md)
 - [Развёртывание с нуля, обновление и резервные копии](docs/START-HERE.ru.md)
 - [Настройка Codex и Claude Code, работа со скиллами](docs/AGENT-SETUP.ru.md)
+- [Каталог скиллов: авторские и сторонние](docs/SKILLS.ru.md)
 - [NameNode, почта агентов и доска задач](docs/NAMENODE.ru.md)
 - [Производственные модули и их команды](docs/MODULES.md) (англ.)
 - [Подключение моделей и профили параметров](docs/MODELS.ru.md)

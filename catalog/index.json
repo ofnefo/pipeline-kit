@@ -1,0 +1,1371 @@
+{
+ "schema": 1,
+ "counts": {
+  "authored": 69,
+  "bundled": 1,
+  "third-party": 55,
+  "total": 125
+ },
+ "sections": {
+  "core": "Общие — для любого пайплайна",
+  "design": "Дизайн, графика и 3D",
+  "office": "Офис и документы",
+  "music": "Музыка и звук",
+  "video": "Видео и моушн",
+  "game": "Игры",
+  "web": "Веб",
+  "telegram": "Telegram",
+  "smm": "SMM и контент",
+  "android": "Android (ADB)",
+  "osint": "OSINT",
+  "security": "Безопасность кода"
+ },
+ "skills": [
+  {
+   "name": "change-review",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Ревью изменений до коммита и деплоя: уровни L0/L1/L2 по реальному изменению, ревьюер из другого семейства моделей, JSON-вердикт с цитатами, гейт и квитанции.",
+   "when_ru": "Перед коммитом или деплоем общего кода, инструментов, скиллов, прод-выкаток, клиентских материалов и переносов данных.",
+   "path": "catalog/skills/core/change-review",
+   "licence": "authored; идея цикла ревью из Zeroshot (MIT), без копирования, см. NOTICE.md"
+  },
+  {
+   "name": "open-creative-tools",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Открытые замены Adobe и Office (GIMP, Krita, Inkscape, Scribus, Natron, Glaxnimate, darktable, Shotcut/melt, Audacity) с проверенными CLI-рецептами.",
+   "when_ru": "Когда Adobe или Office заняты, недоступны или нужен пакетный headless-прогон.",
+   "path": "catalog/skills/core/open-creative-tools",
+   "licence": "authored"
+  },
+  {
+   "name": "ru-instructions",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Русские инструкции, ТЗ, чек-листы, регламенты и промпты для ботов: цель и адресат сначала, одно действие на шаг; ТЗ из голосовых.",
+   "when_ru": "Когда пишешь текст, по которому другие люди будут действовать.",
+   "path": "catalog/skills/core/ru-instructions",
+   "licence": "authored; идеи из kisa-stack (MIT), без копирования, см. NOTICE.md"
+  },
+  {
+   "name": "ru-lyrics",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Русские тексты песен и рэпа: бриф, размер по ударениям, рифма и флоу, проверка на «нейросетевость», формат для ACE-Step.",
+   "when_ru": "Когда нужно написать или разобрать текст песни, куплет, припев или рэп-партию.",
+   "path": "catalog/skills/core/ru-lyrics",
+   "licence": "authored; идеи из открытых скиллов для текстов песен (MIT), без копирования, см. NOTICE.md"
+  },
+  {
+   "name": "ru-promo",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Продающие тексты на русском: лендинг, оффер, первый экран, заголовки, CTA, FAQ, анонсы событий, объявления Яндекс Директ и VK Рекламы.",
+   "when_ru": "Когда нужно написать или проверить продающую страницу, анонс или рекламу.",
+   "path": "catalog/skills/core/ru-promo",
+   "licence": "authored; адаптирует redaktura-skills (CC BY 4.0), см. NOTICE.md"
+  },
+  {
+   "name": "ru-seo",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "SEO для русскоязычных сайтов: сначала Яндекс, затем Google и ИИ-ответы (GEO); метаданные, индексация, robots с Clean-param, sitemap, JSON-LD, IndexNow, проверки перед деплоем.",
+   "when_ru": "Аудит и подготовка SEO-правок русскоязычного сайта.",
+   "path": "catalog/skills/core/ru-seo",
+   "licence": "authored; адаптирует google-yandex-seo-skill (MIT), см. NOTICE.md"
+  },
+  {
+   "name": "ru-text",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Редактура русского текста для людей: канцелярит, признаки нейросетевого текста, типографика, жанры (письмо, пост, кейс, UX-тексты); скрипты проверки.",
+   "when_ru": "Когда текст для клиентов, пользователей или аудитории нужно написать, вычитать или проверить.",
+   "path": "catalog/skills/core/ru-text",
+   "licence": "authored; включает код milchin и Humanizer_RU (MIT) и адаптирует redaktura-skills (CC BY 4.0), см. NOTICE.md"
+  },
+  {
+   "name": "ru-voiceover",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Подготовка русских текстов для озвучки и TTS: фразы на выдох, числа и имена словами, ё и ударения, омографы, паузы.",
+   "when_ru": "Закадр, диктор, объявления в зале, текст для синтеза речи.",
+   "path": "catalog/skills/core/ru-voiceover",
+   "licence": "authored; идеи из открытых TTS-проектов (MIT), без копирования, см. NOTICE.md"
+  },
+  {
+   "name": "video-watch",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Агент «смотрит» видео: ключевые кадры, подписанные контактные листы, локальная расшифровка и индекс «кадр ↔ строка текста» одним скриптом без зависимостей.",
+   "when_ru": "Ревью рендера или монтажа, сравнение двух версий, пересказ локального или публичного ролика.",
+   "path": "catalog/skills/core/video-watch",
+   "licence": "authored"
+  },
+  {
+   "name": "work-kits",
+   "section": "core",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Старт творческой или продуктовой работы: выбор направления и ролей (создатель, дизайнер, разработчик, продакшн, автор, ревьюер) и скиллов на каждом этапе.",
+   "when_ru": "В начале любого заметного проекта: концепт, айдентика, сайт, ролик, трек, пост.",
+   "path": "catalog/skills/core/work-kits",
+   "licence": "authored"
+  },
+  {
+   "name": "accessibility-audit",
+   "section": "core",
+   "also": [
+    "web"
+   ],
+   "kind": "third-party",
+   "what_ru": "Аудит доступности по WCAG: восприятие, управление, понятность, совместимость.",
+   "when_ru": "Когда нужно проверить или исправить доступность интерфейса.",
+   "upstream": "https://github.com/rampstackco/claude-skills/tree/3d4510a94a76ead80122c691b5c480f92f3fbe40/skills/accessibility-audit",
+   "commit": "3d4510a94a76",
+   "licence": "MIT"
+  },
+  {
+   "name": "archify",
+   "section": "core",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Схемы архитектуры, инфраструктуры, потоков данных, последовательностей и процессов.",
+   "when_ru": "Когда нужно наглядно нарисовать систему или процесс.",
+   "upstream": "https://github.com/tt-a1i/archify/tree/7158026e852f3aa6578c741e673b46d7878c92c1/archify",
+   "commit": "7158026e852f",
+   "licence": "MIT"
+  },
+  {
+   "name": "design-taste-frontend",
+   "section": "core",
+   "also": [
+    "web"
+   ],
+   "kind": "third-party",
+   "what_ru": "Правила вкуса для фронтенда: типографика, сетка, цвет, без шаблонных решений.",
+   "when_ru": "Когда нужно уйти от шаблонного вида при сборке интерфейса.",
+   "upstream": "https://github.com/Leonxlnx/taste-skill/tree/ce26fc25c0e5e8cab638f883de62d9a86ee5e45b/skills/taste-skill",
+   "commit": "ce26fc25c0e5",
+   "licence": "MIT"
+  },
+  {
+   "name": "emil-design-eng",
+   "section": "core",
+   "also": [
+    "design",
+    "web"
+   ],
+   "kind": "third-party",
+   "what_ru": "UI-компоненты и анимации: отзывчивость, прерываемость, фокус, reduced motion.",
+   "when_ru": "При создании или ревью кнопок, меню, диалогов, тостов, жестов.",
+   "upstream": "https://github.com/emilkowalski/skills/tree/2d228630ba1446365f614a108cb8252f1feda202/skills/emil-design-eng",
+   "commit": "2d228630ba14",
+   "licence": "MIT"
+  },
+  {
+   "name": "impeccable",
+   "section": "core",
+   "also": [
+    "design",
+    "web"
+   ],
+   "kind": "third-party",
+   "what_ru": "Критика и доводка готового веб-интерфейса: иерархия, шум, дефекты.",
+   "when_ru": "Когда интерфейс собран и его нужно отполировать без смены направления.",
+   "upstream": "https://github.com/pbakaus/impeccable/tree/dad8dbb3aac21ad1fa236c110315ef4abece23e8/.claude/skills/impeccable",
+   "commit": "dad8dbb3aac2",
+   "licence": "Apache-2.0"
+  },
+  {
+   "name": "interface-design",
+   "section": "core",
+   "also": [
+    "web"
+   ],
+   "kind": "third-party",
+   "what_ru": "Проектирование интерфейсов панелей, дашбордов и приложений с памятью решений.",
+   "when_ru": "При дизайне продуктового UI, а не лендинга.",
+   "upstream": "https://github.com/Dammyjay93/interface-design/tree/2f9be3206855bcb2d1d0af262c8bae25cba6658d/.claude/skills/interface-design",
+   "commit": "2f9be3206855",
+   "licence": "MIT"
+  },
+  {
+   "name": "jev",
+   "section": "core",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Процессы, где решение да/нет, метка или рубрика приходит от сервиса Jev.",
+   "when_ru": "Когда повторяемое суждение по тексту или JSON нужно получать структурно.",
+   "upstream": "https://github.com/wuyoscar/jev-skill/tree/86b19a2c9856cc908ad29b5cf02ff1c4e7323c09/skills/jev",
+   "commit": "86b19a2c9856",
+   "licence": "MIT",
+   "note_ru": "нужен платный внешний сервис"
+  },
+  {
+   "name": "jev-eval",
+   "section": "core",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Оценка готовых результатов по явным критериям через Jev, включая ревью изменений.",
+   "when_ru": "Для рубрик, пакетной оценки и доказательных ревью.",
+   "upstream": "https://github.com/wuyoscar/jev-skill/tree/86b19a2c9856cc908ad29b5cf02ff1c4e7323c09/skills/jev-eval",
+   "commit": "86b19a2c9856",
+   "licence": "MIT",
+   "note_ru": "нужен платный внешний сервис"
+  },
+  {
+   "name": "jev-triage",
+   "section": "core",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Классификация и приоритизация входящих (тикеты, отзывы, записи) через Jev.",
+   "when_ru": "Для массовой сортировки записей по заданным правилам.",
+   "upstream": "https://github.com/wuyoscar/jev-skill/tree/86b19a2c9856cc908ad29b5cf02ff1c4e7323c09/skills/jev-triage",
+   "commit": "86b19a2c9856",
+   "licence": "MIT",
+   "note_ru": "нужен платный внешний сервис"
+  },
+  {
+   "name": "mcp-builder",
+   "section": "core",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Руководство по созданию MCP-серверов с хорошо спроектированными инструментами.",
+   "when_ru": "При разработке MCP-сервера для внешнего API или сервиса.",
+   "upstream": "https://github.com/anthropics/skills/tree/8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4/skills/mcp-builder",
+   "commit": "8a1541c4a3ff",
+   "licence": "Apache-2.0",
+   "note_ru": "лицензия в LICENSE.txt самого скилла"
+  },
+  {
+   "name": "performance-optimization",
+   "section": "core",
+   "also": [
+    "web"
+   ],
+   "kind": "third-party",
+   "what_ru": "Поиск и исправление проблем скорости: Core Web Vitals, бандл, ассеты, рендер.",
+   "when_ru": "Когда страница медленная или проседают LCP/INP/CLS.",
+   "upstream": "https://github.com/rampstackco/claude-skills/tree/3d4510a94a76ead80122c691b5c480f92f3fbe40/skills/performance-optimization",
+   "commit": "3d4510a94a76",
+   "licence": "MIT"
+  },
+  {
+   "name": "rag-evaluation-harness",
+   "section": "core",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Офлайн-оценка RAG: Recall@K, ранги, точность контекста, покрытие и валидность цитат.",
+   "when_ru": "Когда нужно измерить качество поиска и цитирования в RAG.",
+   "upstream": "https://github.com/davepoon/buildwithclaude/tree/d75454c7a1187dc7f5f7fb671b009b6e42c9cedb/plugins/all-skills/skills/rag-evaluation-harness",
+   "commit": "d75454c7a118",
+   "licence": "MIT"
+  },
+  {
+   "name": "security-baseline",
+   "section": "core",
+   "also": [
+    "web"
+   ],
+   "kind": "third-party",
+   "what_ru": "Базовая безопасность сайта: HTTPS/TLS, заголовки, CSP, секреты, быстрый аудит.",
+   "when_ru": "Перед запуском сайта или при усилении защиты веб-приложения.",
+   "upstream": "https://github.com/rampstackco/claude-skills/tree/3d4510a94a76ead80122c691b5c480f92f3fbe40/skills/security-baseline",
+   "commit": "3d4510a94a76",
+   "licence": "MIT"
+  },
+  {
+   "name": "systematic-debugging",
+   "section": "core",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Системная отладка: контракт, изоляция причины, одна гипотеза за раз, проверка.",
+   "when_ru": "При воспроизводимом баге, падающем тесте, регрессии или флаки.",
+   "upstream": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/systematic-debugging",
+   "commit": "bb92a7774141",
+   "licence": "MIT"
+  },
+  {
+   "name": "typesafe-ai",
+   "section": "core",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Замена связки «промпт + парсинг» на маленькие типизированные AI-решения TypeSafe.",
+   "when_ru": "Когда фиче нужен «здравый смысл» модели в виде структурного решения.",
+   "upstream": "https://github.com/typesafe-ai/skills/tree/65a39f393687675ce170e6094757de20370365b9/skills/typesafe-ai",
+   "commit": "65a39f393687",
+   "licence": "MIT",
+   "note_ru": "нужен платный внешний сервис"
+  },
+  {
+   "name": "ui-ux-pro-max",
+   "section": "core",
+   "also": [
+    "design",
+    "web"
+   ],
+   "kind": "third-party",
+   "what_ru": "База палитр, шрифтовых пар, стилей, типов графиков и UX-правил с поиском.",
+   "when_ru": "При выборе стиля, шрифтов, палитры или структуры экрана.",
+   "upstream": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/50d8a7de0900119855614541f15a1a616691eb33/.claude/skills/ui-ux-pro-max",
+   "commit": "50d8a7de0900",
+   "licence": "MIT"
+  },
+  {
+   "name": "blender-production",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Пространственные сцены в Blender: блокауты, сцены по планам, материалы и рендер, оптимизация и экспорт, проверка по референсам.",
+   "when_ru": "Когда нужна 3D-сцена стенда или интерьера, блокаут по чертежу или экспорт GLB/FBX.",
+   "path": "catalog/skills/design/blender-production",
+   "licence": "authored; идеи из 4 открытых Blender-скиллов (GPL-3.0, MIT, Apache-2.0), без копирования текста, см. NOTICE.md"
+  },
+  {
+   "name": "cad-production",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Параметрические детали и экспорт STEP/DXF/STL для производства; маршрутизация CAD-инструментов.",
+   "when_ru": "Когда нужна изготавливаемая деталь, крепёж или чертёж для резки и фрезеровки.",
+   "path": "catalog/skills/design/cad-production",
+   "licence": "authored"
+  },
+  {
+   "name": "comfy",
+   "section": "design",
+   "also": [
+    "music",
+    "video",
+    "game"
+   ],
+   "kind": "authored",
+   "what_ru": "Работа с локальным ComfyUI через HTTP API: поиск узлов и моделей по /object_info, валидация графа, /prompt, ожидание, /view, /free, размещение весов, квитанции.",
+   "when_ru": "Когда агенту нужно запустить, проверить или отладить workflow ComfyUI или разместить новые веса.",
+   "path": "catalog/skills/design/comfy",
+   "licence": "authored; идеи из Comfy-Org/comfy-cli (GPL-3.0), без копирования текста, см. NOTICE.md"
+  },
+  {
+   "name": "design-comfy-generation",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Локальные цепочки ComfyUI для дизайна: Z-Image Turbo, Qwen-Image-Edit-2511, BiRefNet, CodeFormer, SeedVR2, плюс векторизация VTracer и поиск иконок со свободной лицензией; квитанция на каждый прогон.",
+   "when_ru": "Когда нужно сгенерировать концепт или текстуру, отредактировать изображение, вырезать фон, восстановить лицо, апскейлить для печати или векторизовать.",
+   "path": "catalog/skills/design/design-comfy-generation",
+   "licence": "authored"
+  },
+  {
+   "name": "design-graphic-compositor",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Сборка брендированной растровой графики: инвентаризация ассетов, контактные листы, детерминированная сборка слоёв по JSON-спеке на Pillow.",
+   "when_ru": "Когда нужен баннер, key visual, широкоформатная графика или разбор брендбука.",
+   "path": "catalog/skills/design/design-graphic-compositor",
+   "licence": "authored"
+  },
+  {
+   "name": "design-pipeline",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Каркас многопроектного пайплайна пространственного дизайна: поиск PROJECT.yaml, профили, опрос по объёму работ, 7 гейтов, маршрутизация по скиллам, диагностика переноса.",
+   "when_ru": "Когда нужно создать или подключить проект, найти активный проект, проверить перенесённое рабочее пространство или понять, какой скилл берёт задачу.",
+   "path": "catalog/skills/design/design-pipeline",
+   "licence": "authored"
+  },
+  {
+   "name": "design-pipeline-chat",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Ведение одного проекта в чате: общее состояние, утверждения со статусами confirmed/assumption/contradiction/open_question, гейты, компактная передача в конце каждого хода.",
+   "when_ru": "Когда оператор просит начать или продолжить конкретный дизайн-проект или узнать следующий шаг.",
+   "path": "catalog/skills/design/design-pipeline-chat",
+   "licence": "authored"
+  },
+  {
+   "name": "design-production-preflight",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Предпечатная проверка: размеры, вылеты, разрешение, цветовые профили, шрифты; скрипт preflight_print.py с кодами выхода и тестами.",
+   "when_ru": "Перед отправкой файлов в печать или производство.",
+   "path": "catalog/skills/design/design-production-preflight",
+   "licence": "authored"
+  },
+  {
+   "name": "design-render-refiner",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Улучшение утверждённого рендера с зафиксированной основой: материалы, графика, свет без изменения геометрии; шаблон промпта.",
+   "when_ru": "Когда геометрия рендера утверждена и нужен только визуальный финиш.",
+   "path": "catalog/skills/design/design-render-refiner",
+   "licence": "authored"
+  },
+  {
+   "name": "design-style-director",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Выбор и защита визуального направления: мудборды, варианты hero / реализуемый / оптимизированный, стоп-листы.",
+   "when_ru": "Когда нужно предложить или зафиксировать стиль проекта до продакшена.",
+   "path": "catalog/skills/design/design-style-director",
+   "licence": "authored"
+  },
+  {
+   "name": "illustrator-production",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Векторные мастер-файлы в Illustrator: артборды, вывески, высечки, чистка вектора, экспорт SVG/PDF.",
+   "when_ru": "Когда нужен точный векторный макет, вывеска, высечка или экспорт для печати.",
+   "path": "catalog/skills/design/illustrator-production",
+   "licence": "authored"
+  },
+  {
+   "name": "image-to-scene",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Из одного фото — черновая 3D-сцена: список объектов, маски SAM, чистая подложка через Qwen-Edit, меши SF3D, глубина и камера MoGe-2, сборка в Blender; статус и квитанция на каждый этап.",
+   "when_ru": "Когда нужно разобрать фото или рендер на объекты и получить редактируемый блокаут для превиза.",
+   "path": "catalog/skills/design/image-to-scene",
+   "licence": "authored"
+  },
+  {
+   "name": "photoshop-production",
+   "section": "design",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Растровые мастер-файлы в Photoshop: маски, ретушь, неразрушающий композитинг, QA экспорта, скриптовое удаление фона.",
+   "when_ru": "Когда нужны маски, ретушь, слоёный PSD-мастер или вырезка фона через Photoshop.",
+   "path": "catalog/skills/design/photoshop-production",
+   "licence": "authored"
+  },
+  {
+   "name": "3d-modeling",
+   "section": "design",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Проектирование и проверка деталей для 3D-печати: размеры, допуски, экспорт.",
+   "when_ru": "Когда нужно смоделировать или подготовить к печати физический предмет.",
+   "upstream": "https://github.com/ghsi011/3d-modeling-skill/tree/ae5951c23818af3f5d471e509860b16604b2e5f9/skills/3d-modeling",
+   "commit": "ae5951c23818",
+   "licence": "MIT"
+  },
+  {
+   "name": "comfy-debug",
+   "section": "design",
+   "also": [
+    "music",
+    "video",
+    "game"
+   ],
+   "kind": "third-party",
+   "what_ru": "Отладка comfy CLI: упавшие воркфлоу, зависшие задачи, ошибки.",
+   "when_ru": "Когда задача ComfyUI или команда comfy CLI падает или зависает.",
+   "upstream": "https://github.com/Comfy-Org/comfy-cli/tree/1ae8f4057dca21d18b56dd56e37ba77f060d1004/comfy_cli/skills/comfy-debug",
+   "commit": "1ae8f4057dca",
+   "licence": "GPL-3.0"
+  },
+  {
+   "name": "illustrator-com",
+   "section": "design",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Управление Adobe Illustrator на Windows через COM/ExtendScript без диалогов.",
+   "when_ru": "Для автоматизации Illustrator из агента.",
+   "upstream": "https://github.com/Moksa1123/illustrator-com-skill/tree/59e268cc21be9567db41bb78f1e20de78aaf759f",
+   "commit": "59e268cc21be",
+   "licence": "MIT"
+  },
+  {
+   "name": "image-prompt-library",
+   "section": "design",
+   "also": [
+    "video"
+   ],
+   "kind": "third-party",
+   "what_ru": "Офлайн-библиотека шаблонов промптов для изображений с поиском.",
+   "when_ru": "Когда нужна идея или шаблон промпта для постера, обложки, ассета.",
+   "upstream": "https://github.com/YouMind-OpenLab/ai-image-prompts-skill/tree/50a570801fb8eb03365663d74eff2668bce50843",
+   "commit": "50a570801fb8",
+   "licence": "MIT"
+  },
+  {
+   "name": "ux-heuristics",
+   "section": "design",
+   "also": [
+    "web"
+   ],
+   "kind": "third-party",
+   "what_ru": "Эвристический аудит юзабилити (Нильсен, когнитивный проход).",
+   "when_ru": "Когда пользователи путаются в форме, навигации или сценарии.",
+   "upstream": "https://github.com/wondelai/skills/tree/c172996495bed0fcd26896a9416b2093fd7073f0/ux-heuristics",
+   "commit": "c172996495be",
+   "licence": "MIT"
+  },
+  {
+   "name": "commercial-document-production",
+   "section": "office",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Подготовка коммерческих документов (КП, договоры, счета, акты, ТрН/ЭТрН): реестр статусов, печати и подписи, закрывающие документы.",
+   "when_ru": "Когда нужно собрать или проверить комплект коммерческих и закрывающих документов.",
+   "path": "catalog/skills/office/commercial-document-production",
+   "licence": "authored"
+  },
+  {
+   "name": "estimate-production",
+   "section": "office",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Сметы с проверкой расчётным движком: десятичные суммы, каскад НДС/налогов/ФОТ/маржи, кредит DAYS360, внутренняя и клиентская версии, лист рычагов.",
+   "when_ru": "Когда нужно посчитать, пересчитать или проверить смету проекта и её финансовую модель.",
+   "path": "catalog/skills/office/estimate-production",
+   "licence": "authored"
+  },
+  {
+   "name": "meeting-transcription",
+   "section": "office",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Локальная расшифровка встреч: ASR (GigaAM-v3 / faster-whisper), диаризация, имена спикеров по подписям видеозвонка, протокол, правила приватности.",
+   "when_ru": "Когда есть запись созвона или встречи и нужны стенограмма со спикерами и протокол.",
+   "path": "catalog/skills/office/meeting-transcription",
+   "licence": "authored"
+  },
+  {
+   "name": "office-document-intake",
+   "section": "office",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Приём и инвентаризация исходных документов: опись с хешами, классификация, извлечение текста и таблиц в неизменяемые пакеты.",
+   "when_ru": "Когда пришла папка с договорами, сметами, сканами или таблицами и нужно понять, что в ней лежит, и извлечь данные.",
+   "path": "catalog/skills/office/office-document-intake",
+   "licence": "authored"
+  },
+  {
+   "name": "office-pipeline",
+   "section": "office",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Каркас офисного конвейера: 5 гейтов (приём, фиксация сметы, план документов, проверка, выдача), пакеты извлечения с адресацией по хешу, маршрутизация артефактов и передача дел.",
+   "when_ru": "Когда нужно провести офисный проект (смета, КП, договор, акты) от исходников до выдачи с проверяемым следом.",
+   "path": "catalog/skills/office/office-pipeline",
+   "licence": "authored"
+  },
+  {
+   "name": "office-preflight",
+   "section": "office",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Предвыдачная проверка офисных документов в 5 слоёв: суммы, формулы, реквизиты, оформление, соответствие плану, с блокерами.",
+   "when_ru": "Перед отправкой сметы, договора или комплекта документов клиенту.",
+   "path": "catalog/skills/office/office-preflight",
+   "licence": "authored"
+  },
+  {
+   "name": "audio-production",
+   "section": "music",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Анализ и обработка аудио: BPM/тональность как гипотезы, LUFS/true peak, стемы (RoFormer/HTDemucs), технический мастер по профилям громкости, отчёты до/после.",
+   "when_ru": "Когда нужно измерить, почистить, разделить, нормализовать или проверить аудиофайл.",
+   "path": "catalog/skills/music/audio-production",
+   "licence": "authored"
+  },
+  {
+   "name": "flstudio-production",
+   "section": "music",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Работа с FL Studio через офлайн-FLP (PyFLP), живой мост и скрипты Piano Roll: осмотр перед записью, снапшоты, сверка после изменений.",
+   "when_ru": "Когда нужно собрать, разобрать или автоматизировать проект FL Studio.",
+   "path": "catalog/skills/music/flstudio-production",
+   "licence": "authored"
+  },
+  {
+   "name": "music-midi-composition",
+   "section": "music",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "MIDI по ролям (барабаны, бас, гармония, мелодия, маркеры), грув прежде всего, осмысленная хуманизация, аудио в MIDI через стемы и Basic Pitch.",
+   "when_ru": "Когда нужно написать, извлечь или подготовить MIDI-партии для DAW.",
+   "path": "catalog/skills/music/music-midi-composition",
+   "licence": "authored"
+  },
+  {
+   "name": "music-neural-audio-lab",
+   "section": "music",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Маршрутизация нейро-инструментов: ACE-Step (генерация, ремикс, продление, перерисовка строки), стемы, аудио в MIDI, TTS, контракт рендера и матрица вариантов.",
+   "when_ru": "Когда нужно сгенерировать, перестилизовать, продлить или поправить трек нейросетью.",
+   "path": "catalog/skills/music/music-neural-audio-lab",
+   "licence": "authored"
+  },
+  {
+   "name": "music-songwriting",
+   "section": "music",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Тексты песен и рэпа: один конфликт, банк деталей, просодия и рифма под карман, редактура в три прохода, эвристическая проверка текста скриптом.",
+   "when_ru": "Когда нужно написать или отредактировать текст песни, куплет, припев или рэп-партию.",
+   "path": "catalog/skills/music/music-songwriting",
+   "licence": "authored"
+  },
+  {
+   "name": "music-track-director",
+   "section": "music",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Ведение трека целиком: этапы 00–80, карточка проекта, гейты, иерархия решений, журнал рендеров, правила релиза.",
+   "when_ru": "Когда начинаешь, продолжаешь или проверяешь проект песни и решаешь, что делать дальше.",
+   "path": "catalog/skills/music/music-track-director",
+   "licence": "authored"
+  },
+  {
+   "name": "music-track-editor",
+   "section": "music",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Редактура трека: 8 проходов аудита (идентичность, структура, текст, исполнение, аранжировка, микс, мастер, продукт) и метки решений по вариантам.",
+   "when_ru": "Когда нужно выбрать вариант, понять, почему трек звучит безлико, или решить, готов ли он к релизу.",
+   "path": "catalog/skills/music/music-track-editor",
+   "licence": "authored"
+  },
+  {
+   "name": "music-vocal-production",
+   "section": "music",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Вокальный продакшн: запись, комп, чистка, компрессия и де-эссинг, минимальный тюнинг, пространство, экспорт стемов; согласие на клон голоса.",
+   "when_ru": "Когда нужно записать, почистить или обработать певческий или рэп-вокал.",
+   "path": "catalog/skills/music/music-vocal-production",
+   "licence": "authored"
+  },
+  {
+   "name": "voiceover-dubbing",
+   "section": "music",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Озвучка и дубляж: скрипт, локальный TTS (клон с согласием или описанный голос), подгонка под тайминги субтитров, проверка WER, сведение с даккингом.",
+   "when_ru": "Когда нужен диктор, закадр, дубляж или переозвучка ролика.",
+   "path": "catalog/skills/music/voiceover-dubbing",
+   "licence": "authored"
+  },
+  {
+   "name": "after-effects-production",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "After Effects через MCP-мост или JSX, рендер aerender: настройка доступа, цикл композиции, версионные рендеры, известные подвохи.",
+   "when_ru": "Есть .aep, шаблон или плагин AE, который нужно собрать, поправить или отрендерить.",
+   "path": "catalog/skills/video/after-effects-production",
+   "licence": "authored"
+  },
+  {
+   "name": "comfy-motion-recipes",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Разбор трендовых приёмов (HUD-разметка, морф, 3D-острова, шторка стилей, глитч, фейковые катсцены) на локальные цепочки ComfyUI с доводкой в AE/Blender/TD.",
+   "when_ru": "Показали референс-ролик и просят «так же».",
+   "path": "catalog/skills/video/comfy-motion-recipes",
+   "licence": "authored"
+  },
+  {
+   "name": "motion-graphics",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Моушн-графика без After Effects: титры, нижние трети, Lottie, HTML/canvas-рендер; маршруты со ссылками на открытые проекты; шрифты и альфа.",
+   "when_ru": "Нужны титры, плашки, кинетическая типографика или анимированная графика кодом.",
+   "path": "catalog/skills/video/motion-graphics",
+   "licence": "authored"
+  },
+  {
+   "name": "neural-video",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Генерация и починка нейровидео: локальные графы Wan 2.2/LTX в ComfyUI, правила кадров и разрешений, структура промпта, разбор брака, ремонт сегментов.",
+   "when_ru": "Нужно сгенерировать или починить шот: I2V, первый/последний кадр, длинный дубль, апскейл.",
+   "path": "catalog/skills/video/neural-video",
+   "licence": "authored; идеи из открытых режиссёрских и промпт-скиллов (MIT, CC BY 4.0) и Wan2.2 (Apache-2.0), см. NOTICE.md"
+  },
+  {
+   "name": "resolve-production",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Монтаж и сдача в DaVinci Resolve: бесплатная версия против Studio, OTIO → otioconvert → импорт, скриптовый цикл в Studio, проверки сдачи.",
+   "when_ru": "Работа с таймлайном Resolve, конформ, цвет, экспорт мастера.",
+   "path": "catalog/skills/video/resolve-production",
+   "licence": "authored"
+  },
+  {
+   "name": "touchdesigner-production",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Проекты TouchDesigner: граф по семействам операторов, аудиореактив, лупы, GLSL, лимиты лицензии, проверка экспорта.",
+   "when_ru": "Запрос про TouchDesigner или есть .toe/.tox.",
+   "path": "catalog/skills/video/touchdesigner-production",
+   "licence": "authored"
+  },
+  {
+   "name": "video-direction",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Режиссура: грамматика кадра, движения камеры, драматургия сцены, библия непрерывности, превиз в Blender, рубрика ревью.",
+   "when_ru": "Нужны раскадровка, шот-лист, превиз или режиссёрский разбор ролика до генерации или съёмки.",
+   "path": "catalog/skills/video/video-direction",
+   "licence": "authored; идеи из открытых режиссёрских и промпт-скиллов (MIT, CC BY 4.0), см. NOTICE.md"
+  },
+  {
+   "name": "video-editing",
+   "section": "video",
+   "also": [],
+   "kind": "bundled",
+   "what_ru": "Просмотр исходников, аннотации, таймлайн и экспорт монтажных ревизий.",
+   "when_ru": "При монтаже в Studio → Montage и скриптовой сборке ролика.",
+   "path": "skills/video-editing",
+   "licence": "authored"
+  },
+  {
+   "name": "video-pipeline",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Маршрутизатор видеопайплайна: бриф → референсы → проверка исходников → выбор маршрута → проверка; версии выходов, громкость, техконтроль отдельно от творческой оценки.",
+   "when_ru": "Любая видеозадача, когда непонятно, какой скилл брать: монтаж, нейровидео, моушн, субтитры, сдача.",
+   "path": "catalog/skills/video/video-pipeline",
+   "licence": "authored"
+  },
+  {
+   "name": "video-transcription",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Расшифровка видео и аудио: ffmpeg → WAV 16 кГц, сначала готовые субтитры, затем faster-whisper/GigaAM; TXT/SRT/VTT/JSON с пословными таймингами.",
+   "when_ru": "Нужны текст, субтитры или тайминги слов из видео или аудио.",
+   "path": "catalog/skills/video/video-transcription",
+   "licence": "authored"
+  },
+  {
+   "name": "vvvv-production",
+   "section": "video",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Патчи vvvv gamma: realtime-визуал, аудиореактив, VJ-лупы, инсталляции; экспорт и его приёмка.",
+   "when_ru": "Запрос про vvvv или есть проект .vl/.v4p.",
+   "path": "catalog/skills/video/vvvv-production",
+   "licence": "authored"
+  },
+  {
+   "name": "game-art-production",
+   "section": "game",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Игровой арт от геймплейного требования до проверки в движке: карточка происхождения ассета, силуэт, контраст, масштаб, импорт.",
+   "when_ru": "Нужны спрайты, тайлы, текстуры, иконки или концепт, которые должны работать в игре.",
+   "path": "catalog/skills/game/game-art-production",
+   "licence": "authored"
+  },
+  {
+   "name": "game-pipeline",
+   "section": "game",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Маршрут игрового проекта: выбор движка (Godot/Babylon.js/Unreal), стадии, раскладка, заказ и приёмка ассетов по manifest.json, сборка и экспорт.",
+   "when_ru": "Новая игра или прототип, ассеты для игры, проверка или сборка игры.",
+   "path": "catalog/skills/game/game-pipeline",
+   "licence": "authored"
+  },
+  {
+   "name": "game-ui-ux",
+   "section": "game",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "UI/UX игры: пять вопросов игрока, правила HUD и меню, клавиатура/мышь и геймпад, проверка на нескольких разрешениях в живой игре.",
+   "when_ru": "Проектирование или ревью HUD, меню, подсказок и обратной связи в игре.",
+   "path": "catalog/skills/game/game-ui-ux",
+   "licence": "authored"
+  },
+  {
+   "name": "godot-development",
+   "section": "game",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Разработка на Godot 4: осмотр → план → реализация → headless-тест → запуск → исправление; типизированный GDScript, сигналы, Resources, сохранения.",
+   "when_ru": "Нужно изменить сцены, скрипты, ввод, сохранения или отладить игру на Godot.",
+   "path": "catalog/skills/game/godot-development",
+   "licence": "authored"
+  },
+  {
+   "name": "playtest-qa",
+   "section": "game",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Плейтест: сборка → автотесты → запуск → игра → воспроизведение → фикс → повтор; минимальное покрытие и отчёт с шагами воспроизведения.",
+   "when_ru": "Нужно протестировать сборку или найти баги перед релизом.",
+   "path": "catalog/skills/game/playtest-qa",
+   "licence": "authored"
+  },
+  {
+   "name": "asset-pipeline",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Конвейер импорта и конвертации ассетов для модов.",
+   "when_ru": "При подготовке ассетов под формат игры.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/asset-pipeline",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "fal-assets",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Генерация игровых ассетов через fal.ai.",
+   "when_ru": "Когда моду нужны новые ассеты.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/fal-assets",
+   "commit": "8370faa8e114",
+   "licence": "MIT",
+   "note_ru": "нужен платный внешний сервис"
+  },
+  {
+   "name": "game-automation",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Автоматизация действий в игре для проверки модов.",
+   "when_ru": "Для автотестов и воспроизведения сценариев в игре.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/game-automation",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "game-recon",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Разведка: движок игры, готовые инструменты и способы моддинга.",
+   "when_ru": "В начале любой задачи моддинга.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/game-recon",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "game-research-websearch",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Поиск сведений об игре и её моддинге в вебе.",
+   "when_ru": "Когда нужны внешние данные об игре.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/game-research-websearch",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "mashup-mods",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Перенос механик, врагов или миров из одной игры в другую.",
+   "when_ru": "Когда нужно скрестить две игры.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/mashup-mods",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "mod-any-game",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Сквозной сценарий моддинга установленной PC-игры.",
+   "when_ru": "Когда нужно модифицировать или расширить игру.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/mod-any-game",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "publish-mod",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Упаковка и публикация мода.",
+   "when_ru": "Когда мод готов к выпуску.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/publish-mod",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "reverse-engineering",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Реверс форматов и бинарников игр.",
+   "when_ru": "Когда без разбора форматов мод не сделать.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/reverse-engineering",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "save-systems",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Системы сохранений в играх: формат, версии, миграции, надёжность.",
+   "when_ru": "При разработке сохранения и загрузки в игре.",
+   "upstream": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/tree/d4b0e35550c55ae70bdfcab4ef5a0e94610438a9/skills/disciplines/save-systems",
+   "commit": "d4b0e35550c5",
+   "licence": "Apache-2.0"
+  },
+  {
+   "name": "share-field-notes",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Запись и публикация заметок по итогам моддинга и реверса.",
+   "when_ru": "До начала работы над игрой и в конце сессии.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/share-field-notes",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "showcase-video",
+   "section": "game",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Запись демонстрационного видео мода.",
+   "when_ru": "Когда нужно показать результат моддинга.",
+   "upstream": "https://github.com/rehan-remade/universal-modder/tree/8370faa8e114baf33acdb23079aff552a7728c4b/skills/showcase-video",
+   "commit": "8370faa8e114",
+   "licence": "MIT"
+  },
+  {
+   "name": "backend-baseline",
+   "section": "web",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Базовые правила бэкенда: Postgres, миграции expand/contract, идемпотентные вебхуки, очереди, безопасность.",
+   "when_ru": "Проектирование или ревью бэкенда сайта или сервиса.",
+   "path": "catalog/skills/web/backend-baseline",
+   "licence": "authored; адаптирует supabase/agent-skills (MIT) и futurice/backend-best-practices (CC BY 4.0), см. NOTICE.md"
+  },
+  {
+   "name": "web-immersive",
+   "section": "web",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Кинематографичные сайты: GSAP, Lenis, three.js, рецепты, мобильная версия и доступность, запись превью-видео.",
+   "when_ru": "Иммерсивный лендинг или портфолио с анимацией и 3D.",
+   "path": "catalog/skills/web/web-immersive",
+   "licence": "authored"
+  },
+  {
+   "name": "web-pipeline",
+   "section": "web",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Маршрутизатор веб-работ: этапы дизайна, медиа, финиша и приёмки.",
+   "when_ru": "Любая работа над сайтом, когда нужно выбрать маршрут.",
+   "path": "catalog/skills/web/web-pipeline",
+   "licence": "authored"
+  },
+  {
+   "name": "web-qa",
+   "section": "web",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "QA сайта: прогоны Playwright, axe, Lighthouse, визуальные диффы, путь пользователя.",
+   "when_ru": "Проверка сайта перед сдачей или релизом.",
+   "path": "catalog/skills/web/web-qa",
+   "licence": "authored; идеи из anthropics/skills webapp-testing (Apache-2.0) и lackeyjb/playwright-skill (MIT), см. NOTICE.md"
+  },
+  {
+   "name": "web-release",
+   "section": "web",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Релиз сайта без привязки к провайдеру: сборка, sha256, бэкап, поэтапный деплой, smoke-проверка, откат.",
+   "when_ru": "Выкатка сайта; прод — только по явной просьбе владельца сайта.",
+   "path": "catalog/skills/web/web-release",
+   "licence": "authored"
+  },
+  {
+   "name": "web-seo-growth",
+   "section": "web",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "SEO-рост: кластеры интентов, брифы, измерения, GEO; офлайн-аудит HTML и сборщик UTM-меток.",
+   "when_ru": "Развитие SEO сверх базовых метаданных.",
+   "path": "catalog/skills/web/web-seo-growth",
+   "licence": "authored"
+  },
+  {
+   "name": "extract-design-md",
+   "section": "web",
+   "also": [
+    "design"
+   ],
+   "kind": "third-party",
+   "what_ru": "Извлечение дизайн-системы проекта в DESIGN.md.",
+   "when_ru": "Когда нужно зафиксировать стиль существующего проекта для агента.",
+   "upstream": "https://github.com/google-labs-code/stitch-skills/tree/0337446dadde6f8c94210444e2aa9d546126480f/plugins/stitch-design/skills/extract-design-md",
+   "commit": "0337446dadde",
+   "licence": "Apache-2.0"
+  },
+  {
+   "name": "react-best-practices",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Правила производительности React/Next.js от Vercel.",
+   "when_ru": "При написании и ревью кода на React/Next.js.",
+   "upstream": "https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices",
+   "commit": "063bee94c3f4",
+   "licence": "MIT",
+   "note_ru": "MIT указан во frontmatter скилла"
+  },
+  {
+   "name": "redesign-existing-projects",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Редизайн существующего сайта или приложения без поломки функций.",
+   "when_ru": "Когда нужно обновить вид готового проекта.",
+   "upstream": "https://github.com/Leonxlnx/taste-skill/tree/ce26fc25c0e5e8cab638f883de62d9a86ee5e45b/skills/redesign-skill",
+   "commit": "ce26fc25c0e5",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-architect",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): архитектура проекта.",
+   "when_ru": "При планировании структуры.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-architect",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-backend",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): серверная часть.",
+   "when_ru": "При сборке бэкенда.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-backend",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-brand",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): бренд, название, тон.",
+   "when_ru": "При создании айдентики.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-brand",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-build",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): сборка по плану.",
+   "when_ru": "На этапе реализации.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-build",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-deploy",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): деплой.",
+   "when_ru": "При выкладке.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-deploy",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-design",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): дизайн экранов.",
+   "when_ru": "При проектировании интерфейса.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-design",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-diff",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): сравнение с образцом.",
+   "when_ru": "Для проверки полноты.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-diff",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-entrepreneur",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): бизнес-модель и позиционирование.",
+   "when_ru": "При оценке идеи продукта.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-entrepreneur",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-launch",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): запуск и продвижение.",
+   "when_ru": "Перед публичным запуском.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-launch",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-recon",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): разведка продукта-образца.",
+   "when_ru": "В начале проекта-реплики.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-recon",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "replica-test",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Серия Replica (клон продукта по образцу): тестирование.",
+   "when_ru": "Перед выпуском.",
+   "upstream": "https://github.com/Jakeschincariol/replica-skill/tree/77c9436fb3d18c3d58169efb8caf4fe906b0dc51/replica-test",
+   "commit": "77c9436fb3d1",
+   "licence": "MIT"
+  },
+  {
+   "name": "shadcn",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Работа с компонентами shadcn/ui: установка, композиция, темы.",
+   "when_ru": "В проектах на shadcn/ui.",
+   "upstream": "https://github.com/shadcn-ui/ui/tree/0e3abd65a97707f4a9cc3ed07bf5006e1cb67b13/skills/shadcn",
+   "commit": "0e3abd65a977",
+   "licence": "MIT"
+  },
+  {
+   "name": "supabase-postgres-best-practices",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Лучшие практики Postgres в Supabase: схемы, индексы, RLS, запросы.",
+   "when_ru": "При проектировании и оптимизации базы в Supabase.",
+   "upstream": "https://github.com/supabase/agent-skills/tree/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices",
+   "commit": "c9be0e931b79",
+   "licence": "MIT"
+  },
+  {
+   "name": "web-design-guidelines",
+   "section": "web",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Проверка UI-кода по Web Interface Guidelines.",
+   "when_ru": "Для ревью интерфейса на соответствие лучшим практикам.",
+   "upstream": "https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/web-design-guidelines",
+   "commit": "063bee94c3f4",
+   "licence": "MIT",
+   "note_ru": "в самом скилле лицензия не указана; соседний скилл репозитория — MIT"
+  },
+  {
+   "name": "telegram-api-modernization",
+   "section": "telegram",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Поддержка новых возможностей Bot API: матрица возможностей, флаги с фолбэком, типизированные методы, тесты адаптера.",
+   "when_ru": "Новые методы Telegram, выбор библиотеки, идеи из open-source.",
+   "path": "catalog/skills/telegram/telegram-api-modernization",
+   "licence": "authored; адаптирует serejaris/telegram-skills (MIT), см. NOTICE.md"
+  },
+  {
+   "name": "telegram-contact-organizer",
+   "section": "telegram",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Контакты и папки: импорт как доказательство, локальный слой правок, ревью неоднозначных совпадений, превью массовых изменений.",
+   "when_ru": "Разбор контактов, коллекций, тегов и папок.",
+   "path": "catalog/skills/telegram/telegram-contact-organizer",
+   "licence": "authored"
+  },
+  {
+   "name": "telegram-group-topics",
+   "section": "telegram",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Топики форума и лички бота: проверка прав, минимальный набор, карта «назначение → message_thread_id».",
+   "when_ru": "Создание, переименование и маршрутизация топиков.",
+   "path": "catalog/skills/telegram/telegram-group-topics",
+   "licence": "authored"
+  },
+  {
+   "name": "telegram-inbox-briefing",
+   "section": "telegram",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Сводка по чатам в фиксированных корзинах со ссылками на сообщения и локальными черновиками ответов.",
+   "when_ru": "«Что в телеге», разбор входящих.",
+   "path": "catalog/skills/telegram/telegram-inbox-briefing",
+   "licence": "authored"
+  },
+  {
+   "name": "telegram-storage-cleanup",
+   "section": "telegram",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Освобождение места: инвентаризация, манифест по группам, карантин, хеши, smoke-тест.",
+   "when_ru": "«Почисти место», аудит диска ассистента.",
+   "path": "catalog/skills/telegram/telegram-storage-cleanup",
+   "licence": "authored"
+  },
+  {
+   "name": "telegram-task-capture",
+   "section": "telegram",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Задачи из сообщений и заметок: извлечение фактов, пакетное превью, запись после подтверждения с квитанцией.",
+   "when_ru": "«Создай задачу», смена статуса, анонс задачи в Telegram.",
+   "path": "catalog/skills/telegram/telegram-task-capture",
+   "licence": "authored"
+  },
+  {
+   "name": "smm-content-ops",
+   "section": "smm",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "Из одобренного мастер-материала — варианты постов: рилсы, карусели, Telegram, брифы, чек-лист перед публикацией.",
+   "when_ru": "Нарезка кейса или ролика в посты под площадки.",
+   "path": "catalog/skills/smm/smm-content-ops",
+   "licence": "authored"
+  },
+  {
+   "name": "smm-pipeline",
+   "section": "smm",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "SMM: стратегия, контент-план и календарь, учёт аккаунтов, гейт согласования, публикация, измерения.",
+   "when_ru": "Планирование и ведение соцсетей бренда.",
+   "path": "catalog/skills/smm/smm-pipeline",
+   "licence": "authored"
+  },
+  {
+   "name": "adb-pipeline",
+   "section": "android",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "ADB только для своих устройств: точный serial, локальный сервер, read-only диагностика, квитанции с откатом.",
+   "when_ru": "Инвентаризация, настройка и установка приложений на своё Android-устройство.",
+   "path": "catalog/skills/android/adb-pipeline",
+   "licence": "authored"
+  },
+  {
+   "name": "osint-case",
+   "section": "osint",
+   "also": [],
+   "kind": "authored",
+   "what_ru": "OSINT-дело: рамки и авторизация, пассивный сбор, журнал доказательств JSONL с хешами, офлайн-отчёт.",
+   "when_ru": "Самоаудит и разрешённая разведка своих, авторизованных или публичных организаций (не частных лиц).",
+   "path": "catalog/skills/osint/osint-case",
+   "licence": "authored"
+  },
+  {
+   "name": "codeql",
+   "section": "security",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Статический анализ через CodeQL.",
+   "when_ru": "Для глубокого анализа потоков данных в коде.",
+   "upstream": "https://github.com/trailofbits/skills/tree/82fe8226252622fa807643bdca1710901198553a/plugins/static-analysis/skills/codeql",
+   "commit": "82fe82262526",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "differential-review",
+   "section": "security",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Ревью изменений с фокусом на безопасность.",
+   "when_ru": "Перед слиянием PR или выпуском изменений.",
+   "upstream": "https://github.com/trailofbits/skills/tree/82fe8226252622fa807643bdca1710901198553a/plugins/differential-review/skills/differential-review",
+   "commit": "82fe82262526",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "sarif-parsing",
+   "section": "security",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Разбор и сводка отчётов SARIF.",
+   "when_ru": "Когда нужно обработать результаты сканеров в формате SARIF.",
+   "upstream": "https://github.com/trailofbits/skills/tree/82fe8226252622fa807643bdca1710901198553a/plugins/static-analysis/skills/sarif-parsing",
+   "commit": "82fe82262526",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "semgrep",
+   "section": "security",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Статический анализ кода через Semgrep.",
+   "when_ru": "Для поиска уязвимостей и типовых ошибок в коде.",
+   "upstream": "https://github.com/trailofbits/skills/tree/82fe8226252622fa807643bdca1710901198553a/plugins/static-analysis/skills/semgrep",
+   "commit": "82fe82262526",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "supply-chain-risk-auditor",
+   "section": "security",
+   "also": [],
+   "kind": "third-party",
+   "what_ru": "Аудит рисков цепочки поставок зависимостей.",
+   "when_ru": "Перед добавлением или обновлением зависимостей.",
+   "upstream": "https://github.com/trailofbits/skills/tree/82fe8226252622fa807643bdca1710901198553a/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor",
+   "commit": "82fe82262526",
+   "licence": "CC-BY-SA-4.0"
+  }
+ ]
+}

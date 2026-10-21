@@ -54,7 +54,7 @@ def scan(paths,denylist=None):
             if address.is_loopback or address.is_unspecified or str(address).startswith(('192.0.2.','198.51.100.','203.0.113.')):continue
             findings.append({'path':name,'line':text.count('\n',0,match.start())+1,'rule':'non-example-ipv4'})
     # Unknown files in public roots cannot silently enter or disappear from a release.
-    for folder in ('apps','agents','config','docs','examples','modules','skills','tests','tools'):
+    for folder in ('apps','agents','catalog','config','docs','examples','modules','skills','tests','tools'):
         for path in (ROOT/folder).rglob('*'):
             if any(p in GENERATED for p in path.parts) or path.suffix=='.pyc':continue
             if path.is_file() and path.relative_to(ROOT).as_posix() not in paths:

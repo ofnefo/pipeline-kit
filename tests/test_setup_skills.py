@@ -54,6 +54,41 @@ class SetupSkillsTests(unittest.TestCase):
                 installer.setup(target, 'codex', 'tasks', profiles, True)
         self.assertFalse(self.project.exists())
 
+    def test_catalog_skill_installs_by_name_and_third_party_is_rejected(self):
+        index = json.loads((ROOT / 'catalog/index.json').read_text('utf-8'))['skills']
+        authored = next(x['name'] for x in index if x['kind'] == 'authored')
+        third = next(x['name'] for x in index if x['kind'] == 'third-party')
+        plan = installer.setup(self.project, 'claude', 'none', [], True, [authored])
+        self.assertEqual([x['status'] for x in plan['skills']], ['installed'])
+        self.assertTrue((self.project / '.claude/skills' / authored / 'SKILL.md').is_file())
+        for name in (third, '../skills', 'no-such-skill'):
+            with self.assertRaises(ValueError):
+                installer.setup(self.project, 'codex', 'none', [], True, [name])
+        self.assertFalse((self.project / '.agents').exists())
+
+    def test_catalog_index_matches_tree(self):
+        index = json.loads((ROOT / 'catalog/index.json').read_text('utf-8'))['skills']
+        names = [x['name'] for x in index]
+        self.assertEqual(len(names), len(set(names)))
+        owned = set()
+        for entry in index:
+            self.assertIn(entry['kind'], ('authored', 'bundled', 'third-party'))
+            self.assertTrue(entry['what_ru'] and entry['when_ru'], entry['name'])
+            if entry['kind'] == 'third-party':
+                self.assertRegex(entry['upstream'], r'^https://github\.com/[^/]+/[^/]+/tree/[0-9a-f]{40}')
+                self.assertTrue(entry['licence'])
+                continue
+            skill = ROOT / entry['path']
+            text = (skill / 'SKILL.md').read_text('utf-8')
+            self.assertRegex(text, rf'(?m)^name: {entry["name"]}$')
+            self.assertRegex(text, r'(?m)^description: "?Use when')
+            if entry['kind'] == 'authored':
+                self.assertEqual(skill.parent.parent, ROOT / 'catalog/skills')
+                self.assertFalse((ROOT / 'skills' / entry['name']).exists(), entry['name'])
+                owned.add(skill)
+        for item in (ROOT / 'catalog/skills').glob('*/*'):
+            self.assertIn(item, owned)
+
     def test_cli_report_survives_ascii_pipe_with_unicode_project(self):
         project = self.project / 'Монтаж_日本'
         result = subprocess.run(

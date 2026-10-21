@@ -1,0 +1,3 @@
+id,planned_date,time_zone,channel,account,format,pillar,objective,hook,cta,source_asset,owner,status,approved_by,approved_at,receipt
+P001,2026-01-15 12:00,Europe/Moscow,telegram,<account>,text+image,case,trust,"<one-line hook>","<CTA>",<PROJECT_ROOT>/cases/case01,<owner>,idea,,,
+P002,2026-01-17 18:00,Europe/Moscow,instagram,<account>,reel 9:16,behind-the-scenes,reach,"<first-frame hook>","<CTA>",<PROJECT_ROOT>/video/clip01,<owner>,production,,,
