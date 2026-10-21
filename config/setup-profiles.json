@@ -9,7 +9,7 @@
     "local-chat": {"skills": [], "requirements": [], "apps": ["Ollama or existing compatible local server"], "models": ["One hardware-compatible text model; recipe: qwen3:4b"]},
     "image-generation": {"skills": ["graphic-production"], "requirements": [], "apps": ["ComfyUI in a separate environment"], "models": ["One selected workflow and its required weights"]},
     "3d": {"skills": [], "requirements": [], "apps": ["Blender"], "models": []},
-    "site-monitoring": {"skills": [], "requirements": [], "apps": ["Separate monitoring service selected by owner"], "models": []}
+    "site-monitoring": {"skills": [], "requirements": [], "apps": ["Uptime Kuma"], "models": []}
   },
   "panel_skills": ["pipeline-control", "release-review"]
 }
