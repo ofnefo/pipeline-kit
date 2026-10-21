@@ -1,0 +1,13 @@
+{
+  "format": "pipeline-kit-documentation-model-profile-v1",
+  "runtime_config": false,
+  "status": "not_run",
+  "purpose": "Fill in the task this model must solve",
+  "model": {"id": "", "revision": "", "source": "", "sha256": "", "licence_reference": ""},
+  "server": {"name": "", "version": "", "launch_command_without_secrets": "", "stop_method": ""},
+  "hardware": {"os": "", "device": "", "ram_gib": null, "vram_gib": null},
+  "parameters": {"quantization": "", "context_limit": null, "generation": {}},
+  "interface": {"kind": "", "base_url_without_credentials": "", "input_format": "", "output_format": ""},
+  "acceptance": {"fixture_paths": [], "criteria": [], "timeout_seconds": null, "repetitions": null},
+  "results": {"receipt_paths": [], "latency_seconds": [], "peak_memory_gib": null, "known_limits": []}
+}

@@ -1,52 +1,66 @@
 # Pipeline Kit
 
-A portable distribution of the existing Control panel and selected reusable production tools. The panel keeps its original interface, project file browser, task board, NameNode cards, Studio chats, montage workspace, converters and SMM editorial planning. It runs against one empty local workspace.
+Локальная рабочая среда для проектов и AI-агентов: панель управления, карта проектов NameNode, задачи, скиллы и инструменты для графики, документов, видео, звука и веба.
 
-## Install
+Pipeline Kit помогает организовать работу Codex, Claude Code и других агентов вокруг одних проектов: где лежат исходники, кто занят задачей, какой результат нужен и чем он проверен. Агент получает инструкции и инструменты, а владелец видит задачи, файлы и результаты в панели.
 
-Use Python **3.12**. From the extracted distribution:
+## С чего начать
 
-```sh
-python -m venv .venv
-```
+**Чтобы агент развернул среду у вас:** передайте ему [готовое задание](agents/BOOTSTRAP_PROMPT.ru.md) и укажите каталог установки и свои задачи. Агент пройдёт [пошаговую инструкцию](docs/START-HERE.ru.md): установит основу, подключит нужные скиллы и инструменты, проверит сценарии и оставит отчёт.
+
+**Чтобы попробовать самостоятельно:** установите Python **3.12**, клонируйте репозиторий и выполните команды из его корня.
 
 Windows PowerShell:
 
 ```powershell
+python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements.txt
-.venv/Scripts/python.exe pipeline_kit.py --workspace workspace init
-.venv/Scripts/python.exe pipeline_kit.py --workspace workspace serve
+.venv/Scripts/python.exe pipeline_kit.py --workspace ../pipeline-workspace init
+.venv/Scripts/python.exe pipeline_kit.py --workspace ../pipeline-workspace serve
 ```
 
 macOS / Linux:
 
 ```sh
+python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python pipeline_kit.py --workspace workspace init
-.venv/bin/python pipeline_kit.py --workspace workspace serve
+.venv/bin/python pipeline_kit.py --workspace ../pipeline-workspace init
+.venv/bin/python pipeline_kit.py --workspace ../pipeline-workspace serve
 ```
 
-Open **http://127.0.0.1:8770**. Stop with Ctrl+C. The server binds to loopback only; there is no login or multi-user network deployment mode. Keep it local. Python dependencies install from your selected package index; the app does not install tools or models.
+Откройте **http://127.0.0.1:8770**. Для остановки используйте `Ctrl+C` в терминале сервера. Панель работает локально для одного пользователя. Проверенная исходная платформа — Windows/Python 3.12; на другой ОС пройдите [проверки установки](docs/TESTING.ru.md).
 
-Create a folder from **Projects → New project folder**, open its files, add a task in **Tasks**, or start a saved conversation in **Studio**. The interface is primarily Russian with English capability explanations. An empty workspace contains no personal cards, brand history, contacts or model presets.
+## Как работать
 
-## Included workflows
+1. Создайте проект в разделе **Проекты** и добавьте исходные файлы.
+2. Заполните карточку **NameNode**: назначение проекта, пути, правила и место изменений.
+3. Создайте **задачу** с ожидаемым результатом и критериями проверки.
+4. Передайте задачу агенту. Он читает карточку, занимает работу, выбирает скилл и выполняет задание.
+5. Проверьте результат и доказательства выполнения, затем примите задачу в панели.
 
-| Area | Included | Additional dependency |
-|---|---|---|
-| Control | Tasks with optimistic version checks, claims and journals, file upload/preview/quarantine/restore | Runtime requirements |
-| Studio | Project chats, local chat streaming, saved messages | Explicit loopback model configuration for inference |
-| Video | Timeline editing, annotations and decisions; editorial and montage CLIs | FFmpeg/FFprobe for media processing; OpenTimelineIO for OTIO export |
-| Design | Layer compositor, contact sheets, asset inspection, physical-size print preflight | Pillow |
-| Office | Project templates, source inventory, decimal estimates, document registers and QA | Office/PDF authoring needs optional libraries/tools |
-| Music | Lyric preflight and pronunciation helpers; audio mastering CLI | FFmpeg/FFprobe for mastering |
-| Web | Offline HTML SEO audit and UTM builder | Standard library |
-| SMM | Local content plans, revisions and JSON export | No remote publication |
+В **Studio** можно хранить проектные чаты и работать с монтажом. Для ответов модели подключите локальный текстовый сервер по [инструкции](docs/MODELS.ru.md). Выбор исполнителя в задаче не запускает внешнего агента: его сессия запускается отдельно.
 
-See [module recipes](docs/MODULES.md), [optional components](docs/CONFIGURATION.md), [agent setup](docs/AGENTS.md), and [release checks](docs/RELEASE.md).
+## Что можно делать
 
-## Boundaries
+| Направление | Возможности |
+| --- | --- |
+| Проекты и задачи | Файлы, история задач, владение работой, журнал и сообщения NameNode |
+| Графика | Композиции из слоёв, анализ исходников, контактные листы, проверка размеров для печати |
+| Документы | Шаблоны проектов, реестры, расчёты смет и проверки согласованности |
+| Видео | Монтажная шкала, аннотации, монтаж и экспорт через FFmpeg |
+| Звук | Подготовка текста, проверка произношения и обработка громкости |
+| Веб | Проверка сохранённого HTML и подготовка UTM-ссылок |
+| SMM | Контент-планы, версии материалов и локальный экспорт |
 
-GPU workers, weights, paid/cloud inference, personal assistants, remote SSH hosts, secrets managers, download queues, automatic publishing, installed creative applications and production sites are **not bundled**. Their original navigation entries explain the missing capability. There is no background host scan, alert sender, scheduler, implicit Git commit or remote startup command.
+Подключайте инструменты по своим задачам. Для монтажа нужен FFmpeg, для отдельных документных операций — дополнительные библиотеки или LibreOffice. Нейрогенерация и внешние редакторы требуют отдельных адаптеров и проверки. Зависимости и команды собраны в [описании модулей](docs/MODULES.md).
 
-Source provenance and bundled third-party notices are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and `provenance.json`. No client project or private core/site repository is included. [Validation status](VALIDATION.md) records the checks actually performed and the remaining release gates.
+## Инструкции
+
+- [Развёртывание с нуля, обновление и резервные копии](docs/START-HERE.ru.md)
+- [Настройка Codex, Claude Code и использование скиллов](docs/AGENT-SETUP.ru.md)
+- [NameNode, сообщения агентов и доска задач](docs/NAMENODE.ru.md)
+- [Подключение моделей и профили параметров](docs/MODELS.ru.md)
+- [Методы тестирования и критерии готовности](docs/TESTING.ru.md)
+- [Техническая конфигурация](docs/CONFIGURATION.md) и [выпуск обновлений](docs/RELEASE.md)
+
+Фактически выполненные проверки перечислены в [VALIDATION.md](VALIDATION.md). Сведения о сторонних компонентах — в [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

@@ -1,0 +1,20 @@
+{
+  "format": "pipeline-kit-documentation-acceptance-v1",
+  "runtime_config": false,
+  "overall_status": "not_run",
+  "timestamp": "",
+  "operator": "",
+  "kit_revision": "",
+  "environment": {"os": "", "python": "", "dependencies_receipt": "", "workspace": ""},
+  "selected_capabilities": [],
+  "checks": [
+    {"id": "replace-with-check-id", "status": "not_run", "criterion": "", "command_or_action": "", "exit_code": null, "actual_result": "", "evidence_paths": []}
+  ],
+  "model_profiles": [],
+  "skill_checks": [],
+  "backup_restore_receipt": "",
+  "independent_review": {"status": "not_run", "reviewer": "", "evidence": []},
+  "owner_acceptance": {"status": "not_run", "decision": ""},
+  "limitations": [],
+  "next_steps": []
+}

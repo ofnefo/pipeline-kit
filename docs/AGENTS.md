@@ -1,10 +1,12 @@
 # Agent integration
 
+For the complete deployment workflow in Russian, start with [START-HERE.ru.md](START-HERE.ru.md), then [agent and skill setup](AGENT-SETUP.ru.md), [NameNode](NAMENODE.ru.md), [models](MODELS.ru.md) and [testing](TESTING.ru.md). The ready-to-use bootstrap task is [BOOTSTRAP_PROMPT.ru.md](../agents/BOOTSTRAP_PROMPT.ru.md).
+
 Read `agents/AGENTS.template.md`, adapt it to your workspace, then install it using your agent's normal project instructions mechanism. `agents/model-policy.example.json` records routing preferences; it neither launches agents nor changes billing permissions.
 
-The standalone skills under `skills/` use standard `SKILL.md` frontmatter. Keep their relative links to `modules/` when copying the distribution. They are curated portable adaptations of owned workflows, not copies of plugin caches or personal voice profiles.
+The standalone skills under `skills/` use standard `SKILL.md` frontmatter. Install selected skill directories in the client's project skill location. Set an absolute `KIT_ROOT` in project instructions and run referenced `modules/` and `apps/` commands from that root with the kit's Python environment; copying a skill does not copy the production modules. See the Russian setup guide for client-specific discovery and a practical verification.
 
-Set `PIPELINE_KIT_WORKSPACE` in the agent process environment to the same absolute workspace passed to the panel. Read tasks with:
+Set `PIPELINE_KIT_WORKSPACE` in the agent process environment to the same absolute workspace passed to the panel. Here `python` means the interpreter from the kit's virtual environment. Read tasks with:
 
 ```sh
 python apps/tools/workboard/board.py list
