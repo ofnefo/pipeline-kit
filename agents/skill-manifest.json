@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "skills_root": "skills",
-  "primary": ["pipeline-control", "office-production", "graphic-production", "video-editing", "audio-finishing", "web-evidence"],
+  "primary": ["pipeline-control", "office-production", "graphic-production", "video-editing", "audio-finishing", "web-evidence", "ui-delivery"],
   "auxiliary": ["release-review"],
   "installation": "Agent-led profile selection and project installation via tools/setup_skills.py; see docs/AUTO-SETUP.ru.md. No global agent configuration is modified automatically."
 }

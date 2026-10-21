@@ -95,7 +95,7 @@ def main():
                     info=zipfile.ZipInfo('pipeline-kit/'+name,(2026,1,1,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o644<<16
                     archive.writestr(info,(ROOT/name).read_bytes())
                 archive.writestr('pipeline-kit/BUILD_MANIFEST.json',json.dumps(rows,indent=2))
-            result.update({'archive':str(output),'sha256':digest(output.read_bytes()),'approval':'candidate; independent review and clean-environment/browser acceptance required'})
+            result.update({'archive':str(output),'sha256':digest(output.read_bytes()),'approval':'candidate; apply scope-based checks and review from docs/RELEASE.md before publication'})
     if args.command!='build' and args.output:
         args.output.parent.mkdir(parents=True,exist_ok=True)
         args.output.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
